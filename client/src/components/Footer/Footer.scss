@@ -1,0 +1,19 @@
+.app-footer {
+    height: 10vh !important;
+    nav {
+        width: 100%;
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+    .footer-links {
+        width: fit-content !important;
+    }
+}
+
+.footer-logo {
+    display: block;
+    width: 90px;
+    height: 60px;
+    color: white;
+    background: url('./../../assets/images/rs_school_js.svg') no-repeat center center / 90%;
+}

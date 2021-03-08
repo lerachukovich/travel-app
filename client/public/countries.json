@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "6045f22a267e41a6c410a776",
+        "country": "Belarus",
+        "capital": "Minsk",
+        "img_source": "https://blog.gezinomi.com/wp-content/uploads/minsk1-1-730x379.jpg"
+    },
+    {
+        "_id": "6045f22af71565827dae5e0c",
+        "country": "Russia",
+        "capital": "Moscow",
+        "img_source": "https://www.fodors.com/assets/destinations/107/sunset-st-basils-cathedral-red-square-moscow_980x650.jpg"
+    },
+    {
+        "_id": "6045f22ac2b67cb586ecb1ef",
+        "country": "Poland",
+        "capital": "Warsaw",
+        "img_source": "https://www.rhinegold.co.uk/wp-content/uploads/2016/01/PIC-1-Warsaw.jpg"
+    },
+    {
+        "_id": "6045f22ad1c95cf6dd8fdb44",
+        "country": "Spain",
+        "capital": "Madrid",
+        "img_source": "https://abroadz.com/wp-content/uploads/2020/08/photo-1539037116277-4db20889f2d4.jpeg"
+    },
+    {
+        "_id": "6045f22aa53c6a55fdb70d4d",
+        "country": "Ukraine",
+        "capital": "Kiev",
+        "img_source": "https://resim.gezinomi.com/assets/ankara-hareketli-kiev-turu-11411--1-16.07.2018151344-b2.jpg"
+    },
+    {
+        "_id": "6045f22a134f0056b508b488",
+        "country": "Italy",
+        "capital": "Rome",
+        "img_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0GLFyBbkrsNPNdCHEiH8w5UxkeUB1gWeKpw&usqp=CAU"
+    },
+    {
+        "_id": "6045f22a629c18b305f2df97",
+        "country": "Germany",
+        "capital": "Berlin",
+        "img_source": "https://media.gettyimages.com/photos/brandenburg-gate-and-the-tv-tower-in-berlin-picture-id507142032?s=612x612"
+    },
+    {
+        "_id": "6045f22a3b05cbd319998a8d",
+        "country": "France",
+        "capital": "Paris",
+        "img_source": "https://www.sortiraparis.com/images/80/1467/523198-visuel-paris-tour-eiffel.jpg"
+    }
+]
