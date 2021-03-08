@@ -3,6 +3,8 @@ import React, {useState} from "react";
 import Header from './../Header/Header';
 import Footer from './../Footer/Footer';
 import CountriesPage from './../CountriesPage/CountriesPage';
+import RegisterForm from './../RegisterForm/RegisterForm';
+import LoginForm from './../LoginForm/LoginForm';
 import './../../styles/bootstrap.min.css';
 
 import {
@@ -19,21 +21,29 @@ const App = () => {
 
     return (
         <div className="app-wrapper">
-        <Header 
-            language={language}
-            setLanguage={setLanguage}
-        />
-        <Router>
-            <Switch>
-                <Redirect from="/" exact to="/countries" />
-                <Route path="/countries">
-                    <CountriesPage
-                        language={language}
-                    />
-                </Route>
-            </Switch>
-        </Router>
-        <Footer/>
+            <Router>
+                <Header 
+                    language={language}
+                    setLanguage={setLanguage}
+                />
+                
+                    <Switch>
+                        <Redirect from="/" exact to="/countries" />
+                        <Route path="/countries">
+                            <CountriesPage
+                                language={language}
+                            />
+                        </Route>
+                        <Route path="/register">
+                            <RegisterForm/>
+                        </Route>
+                        <Route path="/login">
+                            <LoginForm/>
+                        </Route>
+                    </Switch>
+                
+                <Footer/>
+            </Router>
         </div>
     );
 };

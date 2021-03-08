@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import logo from './../../assets/images/app-logo.png';
+import {Link} from 'react-router-dom';
 
 const Header = ({language, setLanguage}) => {
     return (
@@ -11,7 +12,9 @@ const Header = ({language, setLanguage}) => {
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <div class="navbar-nav mr-auto">
                     <div class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
+                        <Link to="/login">
+                            Login
+                        </Link>
                     </div>
                     <div class="nav-item dropdown">
                         <div class="form-group">
