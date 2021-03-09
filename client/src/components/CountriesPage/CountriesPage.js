@@ -2,23 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './CountriesPage.scss';
 import CountryCard from './../CountryCard/CountryCard';
 
-const CountriesPage = () => {
-
-    const [countriesData, setCountriesData] = useState([]);
-
-    const getCountriesData = async () => {
-        await fetch('countries.json')
-        .then((response) => {
-            return response.json();
-          })
-          .then((data) => {
-            setCountriesData(data);
-          });
-    };
-
-    useEffect(()=> {
-        getCountriesData();
-    }, []);
+const CountriesPage = ({countriesData}) => {
 
     const countriesList = (
         countriesData.map(item => {
