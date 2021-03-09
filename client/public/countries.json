@@ -3,48 +3,434 @@
         "_id": "6045f22a267e41a6c410a776",
         "country": "Belarus",
         "capital": "Minsk",
-        "img_source": "https://blog.gezinomi.com/wp-content/uploads/minsk1-1-730x379.jpg"
+        "lat": "53.89",
+        "lon": "27.56",
+        "img_source": "https://blog.gezinomi.com/wp-content/uploads/minsk1-1-730x379.jpg",
+        "video_source": "https://www.youtube.com/watch?v=DczN5Iq9AW4",
+        "description": "Much of Belarus (formerly the Belorussian Soviet Socialist Republic of the USSR, and then Byelorussia) is a hilly lowland with forests, swamps, and numerous rivers and lakes. There are wide rivers emptying into the Baltic and Black seas. Its forests cover over one-third of the land and its peat marshes are a valuable natural resource. The largest lake is Narach, 31 sq mi (79.6 sq km).",
+        "sights" : [
+            {
+                "sight_name": "Brest Fortress",
+                "sight_description": "During Operation Barbarossa in the early days of the Great Patriotic War (WWII), a small band of soldiers gallantly held off a superior Nazi force at Brest Fortress and became Soviet legends. Today the fortress is a rambling complex of museums and Soviet memorials dedicated to that siege. It occupies a beautiful spot at the confluence of the Bug and Mukhavets rivers, about a 25-minute walk from central vul Savetskaya.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/570f2783e1db7f4fdb080afa75c95468-brest-fortress.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Belavezhskaya Pushcha National Park",
+                "sight_description": "Unesco World Heritage Site Belavezhskaya Pushcha National Park is the oldest wildlife refuge in Europe and the pride of Belarus. At the National Park headquarters in Kamyanyuki, 55km north of Brest, you can arrange to tour the park by bus, bicycle or private car, and you can spend the night at one of several comfortable hotels near the park entrance.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/2644f5a133e7432cd0fbaad4e5a645b5-belavezhskaya-pushcha-national-park.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Pripyatsky National Park",
+                "sight_description": "One of the best-kept secrets in Belarus is this relatively untouched swath of marshes, swampland and floodplains emanating from the Pripyat River, about 250km due south of Minsk. The park headquarters are in the village of Lyaskavichy, in a complex that also includes a nature museum and a hotel. Make all your arrangements here. In late August or early September the whole area gets together for good clean country fun at the Polosye Festival in Lyaskavichy.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/e2e2859f731ae7f6ea45b2855dc35fa7-pripyatsky-national-park.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Nyasvizh Castle",
+                "sight_description": "Over a causeway leading away from the town with lovely lakes on either side lies this palace-like castle and park complex. Erected by the Radziwill family in 1583, it has been rebuilt and restored often over the centuries and encompasses many styles. In Soviet times it was turned into a sanatorium, but it has been fully restored in recent years and is looking superb.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/84481598e9ed3b1557dab56a7024342f-nyasvizh-castle.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Mir Castle",
+                "sight_description": "The 16th-century Mir Castle, reflected magnificently in an adjoining pond, resembles something straight out of Disney. A recent renovation has the place looking simply lovely, with gorgeous grounds and impressively restored interiors that have been converted into a museum with beautifully done displays on the life and times of the Radziwills. Definitely splash out for the audioguide, which offers fascinating descriptions of more than 120 items.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/b425e8cc3295505c8cda976a3e1e8bff-mir-castle.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Museum of the Great Patriotic War",
+                "sight_description": "Housed in a garish new building, Minsk's best museum houses an excellent display detailing Belarus' suffering and heroism during the Nazi occupation. With English explanations throughout, atmospheric dioramas and a range of real tanks, airplanes and artillery from WWII, it's one of the capital's few must-see attractions.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/d87d01311618a8d926106fcd0ed5b6f2-museum-of-the-great-patriotic-war.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            }
+        ]
     },
     {
         "_id": "6045f22af71565827dae5e0c",
         "country": "Russia",
         "capital": "Moscow",
-        "img_source": "https://www.fodors.com/assets/destinations/107/sunset-st-basils-cathedral-red-square-moscow_980x650.jpg"
+        "lat": "55.75",
+        "lon": "37.61",
+        "img_source": "https://www.fodors.com/assets/destinations/107/sunset-st-basils-cathedral-red-square-moscow_980x650.jpg",
+        "video_source": "https://www.youtube.com/watch?v=vfUrK9pFfUg",
+        "description": "The Russian Federation is the largest of the 21 republics that make up the Commonwealth of Independent States. It occupies most of eastern Europe and north Asia, stretching from the Baltic Sea in the west to the Pacific Ocean in the east, and from the Arctic Ocean in the north to the Black Sea and the Caucasus in the south. Russia is the largest country in the world in terms of area, but it's unfavorably located in relation to major sea lanes of the world. Much of the country lacks proper soils and climates (either too cold or too dry) for agriculture. Russia contains Mount El'brus, Europe's tallest peak, and Lake Baikal, the deepest lake in the world. Lake Baikal is estimated to hold one fifth of the world's fresh water.",
+        "sights" : [
+            {
+                "sight_name": "Pushkin Museum of Fine Arts",
+                "sight_description": "This is Moscow’s premier foreign-art museum, split over three branches and showing off a broad selection of European works, including masterpieces from ancient civilisations, the Italian Renaissance and the Dutch Golden Age. To see the incredible collection of Impressionist and post-Impressionist paintings, visit the 19th & 20th Century Art Gallery. The Museum of Private Collections shows off complete collections donated by private individuals.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/371c111b6d9785d3ae7204bccf7c3d7b-pushkin-museum-of-fine-arts.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Armoury",
+                "sight_description": "The Armoury dates to 1511, when it was founded under Vasily III to manufacture and store weapons, imperial arms and regalia for the royal court. Later it also produced jewellery, icon frames and embroidery. To this day, the Armoury contains plenty of treasures for ogling, and remains a highlight of any visit to the Kremlin. If possible, buy your time-specific ticket to the Armoury when you buy your ticket to the Kremlin.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/490705545_master.jpg?auto=compress&crop=entropy&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "State Hermitage Museum",
+                "sight_description": "The Hermitage fully lives up to its sterling reputation. You can be absorbed by its treasures for days and still come out wanting more. The enormous collection (over three million items, only a fraction of which are on display in 360 rooms) almost amounts to a comprehensive history of Western European art. Viewing it demands a little planning, so choose the areas you’d like to concentrate on before you arrive.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/GettyImages-562854471_high.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "St Basil's Cathedral",
+                "sight_description": "At the southern end of Red Square stands the icon of Russia: St Basil’s Cathedral. This crazy confusion of colours, patterns and shapes is the culmination of a style that is unique to Russian architecture. In 1552 Ivan the Terrible captured the Tatar stronghold of Kazan on the Feast of Intercession. He commissioned this landmark church, officially the Intercession Cathedral, to commemorate the victory. Created from 1555 to 1561, this masterpiece would become the ultimate symbol of Russia.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/1a92cca135c161ed7ae94513805d7691-st-basil-s-cathedral.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Grand Palace",
+                "sight_description": "The Grand Palace is an imposing building, although with just 30-something rooms, it is not nearly as large as your typical tsarist palace. From the start of June to the end of September it is open to foreign tourists only between noon and 2pm, and again from 4.15pm to 5.45pm (to 7.45pm on Saturdays), due to guided tours being only in Russian at other times (it is quite possible to leave your group, however).",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/76179d79698d36ed0a609fdf6b78fc5d-grand-palace.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Art Muzeon & Krymskaya Naberezhnaya",
+                "sight_description": "Moscow's answer to London's South Bank, Krymskaya Nab (Crimea Embankment) features wave-shaped street architecture with Scandinavian-style wooden elements, beautiful flower beds and a moody fountain, which ejects water randomly from many holes in the ground to the excitement of children and adults alike. It has merged with the Art Muzeon park and its motley collection of Soviet stone idols (Stalin, Sverdlov and a selection of Lenins and Brezhnevs) that were ripped from their pedestals in the post-1991 wave of anti-Soviet feeling.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/65aff8ba6449b8672da55ff425736490-art-muzeon-krymskaya-naberezhnaya.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            }
+        ]
     },
     {
         "_id": "6045f22ac2b67cb586ecb1ef",
         "country": "Poland",
         "capital": "Warsaw",
-        "img_source": "https://www.rhinegold.co.uk/wp-content/uploads/2016/01/PIC-1-Warsaw.jpg"
+        "lat": "52.23",
+        "lon": "21.01",
+        "averageRating": [],
+        "ratedBy": [],
+        "img_source": "https://www.rhinegold.co.uk/wp-content/uploads/2016/01/PIC-1-Warsaw.jpg",
+        "video_source": "https://www.youtube.com/watch?v=esJ_l1b_Ni0",
+        "description": "Poland, a country the size of New Mexico, is in north-central Europe. Most of the country is a plain with no natural boundaries except the Carpathian Mountains in the south and the Oder and Neisse rivers in the west. Other major rivers, which are important to commerce, are the Vistula, Warta, and Bug.",
+        "sights" : [
+            {
+                "sight_name": "Malbork Castle",
+                "sight_description": "Malbork’s blockbuster attraction is its show-stoppingly massive castle sitting on the banks of the sluggish Nogat River, an eastern arm of the Vistula. The construction of Marienburg (Fortress of Mary) was begun by the Teutonic Knights in the 13th century and was the headquarters of the order for almost 150 years; its vast bulk is an apt embodiment of its weighty history. Visits are by self-guided tour with audio guide. Allow at least three hours to do the place justice.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/3e16d45f36558a97e9602121053dffbc-malbork-castle.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Wieliczka Salt Mine",
+                "sight_description": "Some 14km southeast of Kraków, the Wieliczka (vyeh-leech-kah) salt mine has been welcoming tourists since 1722 and today is one of Poland's most popular attractions. It's a subterranean labyrinth of tunnels and chambers – about 300km distributed over nine levels, the deepest being 327m underground – of which a small part is open to the public via two-hour guided tours. First-time visitors take a standard 'tourist' route of the main sights, while return visitors can opt for a more-immersive 'miners' route.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/GettyImages-509318879_high.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Wawel Royal Castle",
+                "sight_description": "As the political and cultural heart of Poland through the 16th century, Wawel Royal Castle is a potent symbol of national identity. It's now a museum containing five separate sections: Crown Treasury and Armoury, State Rooms, Royal Private Apartments, Lost Wawel and the Exhibition of Oriental Art. Each requires a separate ticket. Of the five, the State Rooms and Royal Private Apartments are the most impressive, but to be honest, the best part is just wandering around the castle grounds – open 6am to dusk.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/114510875.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Auschwitz-Birkenau Memorial & Museum",
+                "sight_description": "Auschwitz-Birkenau is synonymous with the Holocaust. More than a million Jews, and many Poles and Roma, were murdered here by German Nazis during WWII. Both sections of the camp – Auschwitz I and the much larger outlying Birkenau (Auschwitz II) – have been preserved and are open to visitors. It's essential to visit both to appreciate the extent and horror of the place.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/68122e0463015e970a23cee9c4afe457-auschwitz-birkenau-memorial-museum.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Wilanów Palace",
+                "sight_description": "Warsaw’s top palace, 10km south of the city centre, was commissioned by King Jan III Sobieski in 1677. It has changed hands several times over the centuries, with each new owner adding a bit of baroque here and a touch of neoclassical there. Restoration of the palace's 2nd floor is underway until 2020, but in the meantime you can tour the magnificent ground-floor rooms packed with artistic baubles and treasures. Last entry to the palace is an hour before closing.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/4b3565c716ad9a6e38fa81cacb6ccced-wilanow-palace.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Royal Castle",
+                "sight_description": "This remarkable copy of the original castle blown up by the Germans in WWII is filled with authentic period furniture and original works of art. Highlights are the Great Apartments (rooms 1 to 9) including the magnificent Great Assembly Hall and the lavishly decorated Throne Room; King’s Apartments (rooms 11 to 20) including the Canaletto Room, hung with 22 paintings by Bernardo Bellotto (1721–80), known in Poland as Canaletto; and the Lanckoroński Collection with two portraits by Rembrandt.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/GettyImages-157377233_high.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            }
+        ]
     },
     {
         "_id": "6045f22ad1c95cf6dd8fdb44",
         "country": "Spain",
         "capital": "Madrid",
-        "img_source": "https://abroadz.com/wp-content/uploads/2020/08/photo-1539037116277-4db20889f2d4.jpeg"
+        "lat": "40.41",
+        "lon": "-3.70",
+        "img_source": "https://abroadz.com/wp-content/uploads/2020/08/photo-1539037116277-4db20889f2d4.jpeg",
+        "video_source": "https://www.youtube.com/watch?v=esJ_l1b_Ni0",
+        "description": "Spain occupies 85% of the Iberian Peninsula, which it shares with Portugal, in southwest Europe. Africa is less than 10 mi (16 km) south at the Strait of Gibraltar. A broad central plateau slopes to the south and east, crossed by a series of mountain ranges and river valleys. Principal rivers are the Ebro in the northeast, the Tajo in the central region, and the Guadalquivir in the south. Off Spain's east coast in the Mediterranean are the Balearic Islands (1,936 sq mi; 5,014 sq km), the largest of which is Majorca. Sixty mi (97 km) west of Africa are the Canary Islands (2,808 sq mi; 7,273 sq km).",
+        "sights" : [
+            {
+                "sight_name": "La Sagrada Família",
+                "sight_description": "If you have time for only one sightseeing outing, this should be it. Gaudí's unparalleled, Unesco-listed La Sagrada Família inspires awe by its sheer verticality, and in the manner of the medieval cathedrals it emulates, it’s still under construction. Work began in 1882 and is hoped (perhaps optimistically) to be completed in 2026, a century after the architect's death. Unfinished it may be, but the cathedral attracts more than 4.5 million visitors a year and is the most visited monument in Spain.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/8ae1c56041e64517e29372a889f1beb7-la-sagrada-familia.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Alhambra",
+                "sight_description": "The Alhambra is Granada’s – and Europe’s – love letter to Moorish culture. Set against the brooding Sierra Nevada peaks, this fortified palace started life as a walled citadel before becoming the opulent seat of Granada’s Nasrid emirs. Their showpiece palaces, the 14th-century Palacios Nazaríes, are among the finest Islamic buildings in Europe and, together with the Generalife gardens, form the Alhambra's great headline act. Tickets sell out, so book ahead; you’ll have to choose a time to enter the Palacios Nazaríes.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/GettyImages-474558334_super.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Mezquita",
+                "sight_description": "It’s impossible to overemphasise the beauty of Córdoba’s great mosque, with its remarkably serene (despite tourist crowds) and spacious interior. One of the world's greatest works of Islamic architecture, the Mezquita hints, with all its lustrous decoration, at a refined age when Muslims, Jews and Christians lived side by side and enriched their city with a heady interaction of diverse, vibrant cultures.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/6542f77f4718469b5903b713fee82256-mezquita.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Museo del Prado",
+                "sight_description": "Welcome to one of the world's premier art galleries. More than 7000 paintings are held in the Museo del Prado’s collection (of which only around 1500 are currently on display), acting like a window onto the historical vagaries of the Spanish soul, at once grand and imperious in the royal paintings of Velázquez, darkly tumultuous in Pinturas negras (Black Paintings) of Goya, and outward looking with sophisticated works of art from all across Europe.",
+                "sight_view": "https://lp-cms-production.imgix.net/2020-11/b7849d556ceb228f862343531013bcfdff81eede0967be06a1577dc190cf1c10.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Catedral de Santiago de Compostela",
+                "sight_description": "The grand heart of Santiago, the cathedral soars above the city in a splendid jumble of spires and sculpture. Built piecemeal over several centuries, its beauty is a mix of an original Romanesque structure (constructed between 1075 and 1211) and later Gothic and baroque flourishes. The tomb of Santiago beneath the main altar is a magnet for all who come here. The cathedral's artistic high point is the Pórtico de la Gloria inside the west entrance, featuring 200 masterly Romanesque sculptures.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/05a9c3472caf89cf4e7f241ed4ccf23c-catedral-de-santiago-de-compostela.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Palacios Nazaríes",
+                "sight_description": "This is the stunning centrepiece of the Alhambra, the most brilliant Islamic building in Europe, with perfectly proportioned rooms and courtyards, intricately moulded stucco walls, beautiful tiling, fine carved wooden ceilings and elaborate stalactite-like muqarnas vaulting, all worked in mesmerising, symbolic, geometrical patterns. Arabic inscriptions proliferate in the stucco work.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/456941fcc28e7443740c5723fccdeab6-palacio-nazaries.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            }
+        ]
     },
     {
         "_id": "6045f22aa53c6a55fdb70d4d",
         "country": "Ukraine",
         "capital": "Kiev",
-        "img_source": "https://resim.gezinomi.com/assets/ankara-hareketli-kiev-turu-11411--1-16.07.2018151344-b2.jpg"
+        "lat": "50.45",
+        "lon": "30.52",
+        "img_source": "https://resim.gezinomi.com/assets/ankara-hareketli-kiev-turu-11411--1-16.07.2018151344-b2.jpg",
+        "video_source": "https://www.youtube.com/watch?v=4axv1_VHBz8",
+        "description": "Located in southeast Europe, the country consists largely of fertile black soil steppes. Mountainous areas include the Carpathians in the southwest and the Crimean chain in the south. Ukraine is bordered by Belarus on the north, by Russia on the north and east, by the Black Sea on the south, by Moldova and Romania on the southwest, and by Hungary, Slovakia, and Poland on the west.",
+        "sights" : [
+            {
+                "sight_name": "St Sophia's Cathedral",
+                "sight_description": "The interior is the most astounding aspect of Kyiv's oldest standing church. Many of the mosaics and frescoes are original, dating back to 1017–31, when the cathedral was built to celebrate Prince Yaroslav's victory in protecting Kyiv from the Pechenegs (tribal raiders). While equally attractive, the building's gold domes and 76m-tall wedding-cake bell tower are 18th-century baroque additions. It's well worth climbing the bell tower for a bird's-eye view of the cathedral and 360-degree panoramas of Kyiv.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/3dac8636463130946be3ba9d87512d7f-st-sophia-s-cathedral.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Kyevo-Pecherska Lavra",
+                "sight_description": "Tourists and Orthodox pilgrims alike flock to the Lavra, set on 28 hectares of grassy hills above the Dnipro River in Pechersk. It's easy to see why tourists come: the monastery's cluster of gold-domed churches is a feast for the eyes, the hoard of Scythian gold rivals that of the Hermitage, and the underground labyrinths lined with mummified monks are exotic and intriguing. For pilgrims, the rationale is much simpler: to them, this is the holiest ground in the country.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/58ee91794d8c3e23c4fc19d8137074b3-kyevo-pecherska-lavra.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Kamyanets-Podilsky Fortress",
+                "sight_description": "Built of wood in the 10th to 13th centuries, then redesigned and rebuilt in stone by Italian military engineers in the 16th century, K-P's fortress is a mishmash of styles. But the overall impression is breathtaking and the view from the Turkish Bridge leading to the fortress would certainly make a short list of Ukraine's most iconic front-page vistas. The fortress is filled with museums and cafes, and in the summer concerts frequently take place in its vast courtyard.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/536552153_super.jpg?auto=compress&crop=entropy&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Prymorsky Boulevard",
+                "sight_description": "Odesa's elegant facade, this tree-lined, clifftop promenade was designed to enchant the passengers of arriving boats with the neoclassical opulence of its architecture and civility, unexpected in these parts at the time of construction in the early 19th century. Imperial architects also transformed the cliff face into terraced gardens descending to the port, divided by the famous Potemkin Steps – the Istanbul Park lies east of the steps and the Greek Park west of them.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/e08672df7dbfa6dc907119b1736ca22e-lpl-prymorsky_boulevard.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Rodina Mat",
+                "sight_description": "As you journey into Kyiv from the airport, at some point this giant statue of a female warrior will loom up on the horizon and make you wonder, 'What the hell is that?' Well, it's Rodina Mat – literally 'Nation's Mother'. Inaugurated by Soviet leader Leonid Brezhnev in 1981, it was the second and last Nation's Mother monument erected in the USSR. Today it houses the excellent Great Patriotic War Museum in its base, and has a pair of viewing platforms.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/shutterstock_22661377.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Chernivtsi University",
+                "sight_description": "University buildings are often called 'dreaming spires', but Chernivtsi's is more like an acid trip. This fantastic, Unesco-listed red-brick ensemble, with coloured tiles decorating its pseudo-Byzantine, pseudo-Moorish and pseudo-Hanseatic wings, is the last thing you'd expect here. The architect responsible was Czech Josef Hlavka, who was also behind Chernivtsi's Former Armenian Cathedral, as well as large chunks of Vienna. He completed the university in 1882 for the Metropolitans (Orthodox Church leaders) of Bukovyna as their official residence. The Soviets moved the university here.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/467388860_super.jpg?auto=compress&crop=entropy&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            }
+        ]
     },
     {
         "_id": "6045f22a134f0056b508b488",
         "country": "Italy",
         "capital": "Rome",
-        "img_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0GLFyBbkrsNPNdCHEiH8w5UxkeUB1gWeKpw&usqp=CAU"
+        "lat": "41.90",
+        "lon": "12.49",
+        "img_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0GLFyBbkrsNPNdCHEiH8w5UxkeUB1gWeKpw&usqp=CAU",
+        "video_source": "https://www.youtube.com/watch?v=oSexfR0Ubzw",
+        "description": "Italy, slightly larger than Arizona, is a long peninsula shaped like a boot, surrounded on the west by the Tyrrhenian Sea and on the east by the Adriatic. It is bounded by France, Switzerland, Austria, and Slovenia to the north. The Apennine Mountains form the peninsula's backbone; the Alps form its northern boundary. The largest of its many northern lakes is Garda (143 sq mi; 370 sq km); the Po, its principal river, flows from the Alps on Italy's western border and crosses the Lombard plain to the Adriatic Sea. Several islands form part of Italy; the largest are Sicily (9,926 sq mi; 25,708 sq km) and Sardinia (9,301 sq mi; 24,090 sq km).",
+        "sights" : [
+            {
+                "sight_name": "Galleria degli Uffizi",
+                "sight_description": "Home to the world's greatest collection of Italian Renaissance art, Florence's premier gallery occupies the vast U-shaped Palazzo degli Uffizi (1560–80), built as government offices. The collection, bequeathed to the city by the Medici family in 1743 on condition that it never leave Florence, contains some of Italy's best-known paintings, including a room full of Botticelli masterpieces.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/47dbfd6ec77fe46ed97ba7a0e144a94a-galleria-degli-uffizi.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Vatican Museums",
+                "sight_description": "Founded by Pope Julius II in the early 16th century and enlarged by successive pontiffs, the Vatican Museums boast one of the world's greatest art collections. Exhibits, which are displayed along about 7km of halls and corridors, range from Egyptian mummies and Etruscan bronzes to ancient busts, old masters and modern paintings. Highlights include the spectacular collection of classical statuary in the Museo Pio-Clementino, a suite of rooms frescoed by Raphael, and the Michelangelo-painted Sistine Chapel.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/GettyImages-132986402_medium.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Roman Forum",
+                "sight_description": "An impressive – if rather confusing – sprawl of ruins, the Roman Forum was ancient Rome's showpiece centre, a grandiose district of temples, basilicas and vibrant public spaces. The site, originally a marshy burial ground, was first developed in the 7th century BC, growing over time to become the social, political and commercial hub of the Roman empire. Signature sights include the Arco di Settimio Severo, the Curia, the Tempio di Saturno and the Arco di Tito.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/bf8768872b56d96ed93125d6fab86a98c45e1e35b18176ce713316e281e04667.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "St Peter's Basilica",
+                "sight_description": "In this city of outstanding churches, none can hold a candle to St Peter's, Italy’s largest, richest and most spectacular basilica. Built atop a 4th-century church, it was consecrated in 1626 after 120 years' construction. Its lavish interior contains many spectacular works of art, including three of Italy's most celebrated masterpieces: Michelangelo’s Pietà, his soaring dome, and Bernini’s 29m-high baldachin over the papal altar.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/ca9d3953d4c60441143ae03f86f3056af400504f5f92de21e56de3b270d55403.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Basilica di Santa Maria Novella",
+                "sight_description": "The striking green-and-white marble facade of 13th- to 15th-century Basilica di Santa Maria Novella fronts an entire monastical complex, comprising romantic church cloisters and a frescoed chapel. The basilica itself is a treasure chest of artistic masterpieces, climaxing with frescoes by Domenico Ghirlandaio. The lower section of the basilica's striped marbled facade is transitional from Romanesque to Gothic; the upper section and the main doorway (1456–70) were designed by Leon Battista Alberti. Book in advance online to avoid queues.",
+                "sight_view": "https://lp-cms-production.imgix.net/2020-11/LPI-19080-35.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Palatino",
+                "sight_description": "Sandwiched between the Roman Forum and the Circo Massimo, the Palatino (Palatine Hill) is one of Rome's most spectacular sights, a beautiful, atmospheric area of towering pine trees, majestic ruins and unforgettable views. This is where Romulus supposedly founded the city in 753 BC and Rome's emperors lived in palatial luxury. Look out for the stadio (stadium), the ruins of the Domus Flavia (imperial palace), and grandstand views over the Roman Forum from the Orti Farnesiani.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/0a83983c8a95e822712c9d6d3807c615-palatino-palatine-hill.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            }
+        ]
     },
     {
         "_id": "6045f22a629c18b305f2df97",
         "country": "Germany",
         "capital": "Berlin",
-        "img_source": "https://media.gettyimages.com/photos/brandenburg-gate-and-the-tv-tower-in-berlin-picture-id507142032?s=612x612"
+        "lat": "52.52",
+        "lon": "13.40",
+        "img_source": "https://media.gettyimages.com/photos/brandenburg-gate-and-the-tv-tower-in-berlin-picture-id507142032?s=612x612",
+        "video_source": "https://www.youtube.com/watch?v=ZHHbpy91O2E",
+        "description": "Located in central Europe, Germany is made up of the North German Plain, the Central German Uplands (Mittelgebirge), and the Southern German Highlands. The Bavarian plateau in the southwest averages 1,600 ft (488 m) above sea level, but it reaches 9,721 ft (2,962 m) in the Zugspitze Mountains, the highest point in the country. Germany's major rivers are the Danube, the Elbe, the Oder, the Weser, and the Rhine. Germany is about the size of Montana.",
+        "sights" : [
+            {
+                "sight_name": "Pergamonmuseum",
+                "sight_description": "Opening a fascinating window on to the ancient world, this palatial three-wing complex unites a rich feast of classical sculpture and monumental architecture from Greece, Rome, Babylon and the Middle East, including the radiant-blue Ishtar Gate from Babylon, the Roman Market Gate of Miletus and the Caliph's Palace of Mshatta. Note that extensive renovations put the namesake Pergamon Altar and several rooms off-limits until 2023. Budget at least two hours for this amazing place and be sure to use the free and excellent audioguide.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/d5aeedf5ee5a5a2b0f1287c7139a4e54-pergamonmuseum.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Kölner Dom",
+                "sight_description": "Cologne’s geographical and spiritual heart – and its single-biggest tourist draw – is the magnificent Kölner Dom. With its soaring twin spires, this is the Mt Everest of cathedrals, jam-packed with art and treasures. For an exercise fix, climb the 533 steps up the Dom’s south tower to the base of the steeple that dwarfed all buildings in Europe until Gustave Eiffel built a certain tower in Paris. The Domforum visitor centre is a good source of info and tickets.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/GettyImages-562412011_medium.jpg?auto=compress&crop=entropy&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Gedenkstätte Buchenwald",
+                "sight_description": "Between 1937 and 1945, hidden from Weimarers and surrounding villagers, 250,000 men, women and children were incarcerated here, some 56,500 of whom were murdered. Buchenwald ('Beech Forest') has been preserved almost untouched as a memorial, with visitors encouraged to wander quietly and freely around the numerous structures, including the crematorium. Tours, pamphlets and books in English are available, as are excellent multilanguage audio guides (€3, or €5 with images). Last admission is 30 minutes before closing.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/1e46a3f3d148f5dee428ae511b911fe6-gedenkstatte-buchenwald.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Aachener Dom",
+                "sight_description": "It’s impossible to overestimate the significance of Aachen’s magnificent cathedral. The burial place of Charlemagne, it’s where more than 30 German kings were crowned and where pilgrims have flocked since the 12th century. Before entering the church, stop by Dom Information for info and tickets for tours and the cathedral treasury. English tours run daily at 2pm.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/05b3384752ae9950e6a6dd9afd1f17fb-aachener-dom.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Schloss Linderhof",
+                "sight_description": "A pocket-sized trove of weird treasures, Schloss Linderhof was Ludwig II’s smallest but most sumptuous palace, and the only one he lived to see fully completed. Finished in 1878, the palace hugs a steep hillside in a fantasy landscape of French gardens, fountains and follies. The reclusive king used the palace as a retreat and hardly ever received visitors here. Linderhof was inspired by Versailles and dedicated to Louis XIV, the French ‘Sun King’.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/6c726223f62965082fc382d393d13811-schloss-linderhof.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Schloss Neuschwanstein",
+                "sight_description": "Appearing through the mountaintops like a mirage, Schloss Neuschwanstein was the model for Disney’s Sleeping Beauty castle. King Ludwig II planned this fairy-tale pile himself, with the help of a stage designer rather than an architect. He envisioned it as a giant stage on which to recreate the world of Germanic mythology, inspired by the operatic works of his friend Richard Wagner. The most impressive room is the Sängersaal (Minstrels’ Hall), whose frescos depict scenes from the opera Tannhäuser.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/f4c6010ec45fdca4fe1be3d257a89992da17e779add401495b4c1cfc3968d2bf.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            }
+        ]
     },
     {
         "_id": "6045f22a3b05cbd319998a8d",
         "country": "France",
         "capital": "Paris",
-        "img_source": "https://www.sortiraparis.com/images/80/1467/523198-visuel-paris-tour-eiffel.jpg"
+        "lat": "48.86",
+        "lon": "2.34",
+        "img_source": "https://www.sortiraparis.com/images/80/1467/523198-visuel-paris-tour-eiffel.jpg",
+        "video_source": "https://www.youtube.com/watch?v=UfEiKK-iX70",
+        "description": "France is about 80% the size of Texas. In the Alps near the Italian and Swiss borders is western Europe's highest point?Mont Blanc (15,781 ft; 4,810 m). The forest-covered Vosges Mountains are in the northeast, and the Pyrnes are along the Spanish border. Except for extreme northern France, the country may be described as four river basins and a plateau. Three of the streams flow west?the Seine into the English Channel, the Loire into the Atlantic, and the Garonne into the Bay of Biscay. The Rhne flows south into the Mediterranean. For about 100 mi (161 km), the Rhine is France's eastern border. In the Mediterranean, about 115 mi (185 km) east-southeast of Nice, is the island of Corsica (3,367 sq mi; 8,721 sq km).",
+        "sights" : [
+            {
+                "sight_name": "Musée du Louvre",
+                "sight_description": "It isn’t until you’re standing in the vast courtyard of the Louvre, with sunlight shimmering through the glass pyramid and crowds milling about beneath the museum’s ornate façade, that you can truly say you’ve been to Paris. Holding tens of thousands of works of art – from Mesopotamian, Egyptian and Greek antiquities to masterpieces by artists such as da Vinci (including his incomparable Mona Lisa), Michelangelo and Rembrandt – it’s no surprise that this is one of the world’s most visited museums.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/GettyImages-548231661_full.jpg?auto=compress&crop=entropy&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Château de Chenonceau",
+                "sight_description": "Spanning the languid Cher River atop a graceful arched bridge, Chenonceau is one of France's most elegant châteaux. It's hard not to be moved and exhilarated by the glorious setting, the formal gardens, the magic of the architecture and the château's fascinating history, shaped by a series of powerful women. The interior is decorated with rare furnishings and an art collection that includes works by Tintoretto, Correggio, Rubens, Murillo, Van Dyck and Ribera (look for an extraordinary portrait of Louis XIV).",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/9abe5ce8dbe4933ede77f4e119041ab8-chateau-de-chenonceau.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Château de Chambord",
+                "sight_description": "One of the crowning achievements of French Renaissance architecture, the Château de Chambord – with 426 rooms, 282 fireplaces and 77 staircases – is the largest, grandest and most visited château in the Loire Valley. Begun in 1519 by François I (r 1515–47) as a weekend hunting retreat, it quickly grew into one of the most ambitious – and expensive – building projects ever undertaken by a French monarch. A French-style formal garden opened in 2017.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/fbea19c27dc412bd445ab1661928ae28-chateau-de-chambord.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Jardin du Luxembourg",
+                "sight_description": "This inner-city oasis of formal terraces, chestnut groves and lush lawns has a special place in Parisians' hearts. Napoléon dedicated the 23 gracefully laid-out hectares of the Luxembourg Gardens to the children of Paris, and many residents spent their childhood prodding 1920s wooden sailboats with long sticks on the octagonal Grand Bassin pond, watching puppets perform puppet shows at the Théâtre du Luxembourg and riding the carrousel (merry-go-round) or ponies.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/c205fc1321c578380bfcb1eef323ed6e-jardin-du-luxembourg.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Centre Pompidou",
+                "sight_description": "Renowned for its radical architectural statement, the 1977-opened Centre Pompidou brings together galleries and cutting-edge exhibitions, hands-on workshops, dance performances, cinemas and other entertainment venues, with street performers and fanciful fountains outside. The Musée National d’Art Moderne, France’s national collection of art dating from 1905 onwards, is the main draw; a fraction of its 100,000-plus pieces – including Fauvist, cubist, surrealist, pop art and contemporary works – is on display. Don't miss the spectacular Parisian panorama from the rooftop.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/e21202bd0adfe2f1ed852e55df9098cd-centre-pompidou.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            },
+            {
+                "sight_name": "Cathédrale Notre Dame",
+                "sight_description": "Imagine the extravagance of a French royal coronation. The focal point of such pomposity was Reims’ resplendent Gothic cathedral, begun in 1211 on a site occupied by churches since the 5th century. The interior is a rainbow of stained-glass windows; the finest are the western facade’s great rose window, the north transept's rose window and the vivid Marc Chagall creations (1974) in the central axial chapel. The tourist office rents out audio guides for self-paced tours.",
+                "sight_view": "https://lp-cms-production.imgix.net/2019-06/469811059_super.jpg?auto=compress&crop=center&fit=crop&format=auto&h=416&w=960",
+                "averageRating": [],
+                "ratedBy": []
+            }
+        ]
     }
 ]
