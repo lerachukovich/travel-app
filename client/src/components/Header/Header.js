@@ -18,7 +18,10 @@ const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
                         </Link>
                     </div>
                 </div>
-
+                <SearchForm
+                    searchValue={searchValue}
+                    setSearchValue={setSearchValue}
+                />
             </div>
             <div className="nav-item dropdown">
                 <div className="form-group language-switcher">
@@ -28,12 +31,6 @@ const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
                         <option value="blr">BY</option>
                     </select>
                 </div>
-
-                <SearchForm
-                    searchValue={searchValue}
-                    setSearchValue={setSearchValue}
-                />
-
             </div>
         </nav>
     )
