@@ -10,10 +10,10 @@ const SearchForm = ({searchValue, setSearchValue}) => {
     }, []);
 
     return (
-        <form class="form-inline my-2 my-lg-0 search-form">
-            <input ref={searchInputRef} class="form-control mr-sm-2" type="text" placeholder="Search country" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+        <form className="form-inline my-2 my-lg-0 search-form">
+            <input ref={searchInputRef} className="form-control mr-sm-2" type="text" placeholder="Search country" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
             <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            <i className="fa fa-times delete-input" onClick={() => setSearchValue('')}></i>
+            <i className="fa fa-times delete-input" onClick={() => setSearchValue('')}> </i>
         </form>
     )
 
