@@ -1,5 +1,4 @@
 .app-header {
-    height: 10vh !important;
     .app-logo {
         display: block;
         width: 50px;
@@ -12,6 +11,7 @@
 
     .language-switcher {
         margin: 0 0 0 15px;
+        cursor: pointer;
         .form-control {
             padding: 0.5rem;
         }
