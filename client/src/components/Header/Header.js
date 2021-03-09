@@ -2,8 +2,9 @@ import React from 'react';
 import './Header.scss';
 import logo from './../../assets/images/app-logo.png';
 import {Link} from 'react-router-dom';
+import SearchForm from './../SearchForm/SearchForm';
 
-const Header = ({language, setLanguage}) => {
+const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
     return (
         <nav class="app-header navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand app-logo" href="#">
@@ -26,10 +27,11 @@ const Header = ({language, setLanguage}) => {
                         </div>
                     </div>
                 </div>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" />
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                <SearchForm
+                    searchValue={searchValue}
+                    setSearchValue={setSearchValue}
+                />
+
             </div>
         </nav>
     )
