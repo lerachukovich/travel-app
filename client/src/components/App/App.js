@@ -5,7 +5,6 @@ import Footer from './../Footer/Footer';
 import CountriesPage from './../CountriesPage/CountriesPage';
 import RegisterForm from './../RegisterForm/RegisterForm';
 import LoginForm from './../LoginForm/LoginForm';
-import './../../styles/bootstrap.min.css';
 
 import {
   BrowserRouter as Router,
@@ -54,7 +53,7 @@ const App = () => {
     return (
         <div className="app-wrapper">
             <Router>
-                <Header 
+                <Header
                     language={language}
                     setLanguage={setLanguage}
                     searchValue={searchValue}
@@ -77,6 +76,7 @@ const App = () => {
                         <LoginForm/>
                     </Route>
                 </Switch>
+
 
                 <Footer/>
             </Router>

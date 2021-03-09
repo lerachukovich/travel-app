@@ -9,4 +9,11 @@
             height: 100%;
         }
     }
+
+    .language-switcher {
+        margin: 0 0 0 15px;
+        .form-control {
+            padding: 0.5rem;
+        }
+    }
 }
