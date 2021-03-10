@@ -6,7 +6,6 @@ import CountriesPage from './../CountriesPage/CountriesPage';
 import RegisterForm from './../RegisterForm/RegisterForm';
 import LoginForm from './../LoginForm/LoginForm';
 import useHttp from "../../hooks/http.hook";
-import 'materialize-css';
 
 import {
   BrowserRouter as Router,
