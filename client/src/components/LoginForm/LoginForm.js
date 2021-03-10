@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react';
 import './LoginForm.scss';
 import {Link} from 'react-router-dom';
 import useHtt from '../../hooks/http.hook';
-import useMessage from '../../hooks/message.hook';
+import Toast from '../../utils/Toast';
 
 const LoginForm = () => {
-    const message = useMessage();
     const {loading, request, error, clearError} = useHtt();
+    const [showToast, setShowToast] = useState(false);
 
     const [form, setForm] = useState({
         email: '',
@@ -18,20 +18,24 @@ const LoginForm = () => {
     }
 
     useEffect(() => {
-        message(error);
+        setTimeout(() => {
+            setShowToast(false);
+        }, 2000);
         clearError();
-    }, [error, message, clearError]);
+    }, [error])
 
     const loginHandler = async (e) => {
         e.preventDefault();
         try {
             const data = await request('/api/users/login', 'POST', {...form});
             console.log(data)
-        } catch (e) {            
+        } catch (e) {      
+            setShowToast(true);      
         }
     }
 
     return (
+        <>
         <div className="login-page-wrapper">
             <div className="card text-white bg-danger mb-3 login-form">
                 <div className="card-header">
@@ -80,6 +84,8 @@ const LoginForm = () => {
                 
             </div>
         </div>
+        <Toast isShow={showToast} />
+        </>
     )
 
 }
