@@ -13,8 +13,11 @@ import {
   Redirect,
 } from "react-router-dom";
 
+import { useAuth } from '../../hooks/auth.hook';
+import { AuthContext } from '../../context/AuthContext';
 
 const App = () => {
+    const {token, login, logout} = useAuth();
 
     const [countriesData, setCountriesData] = useState([]);
 
@@ -51,36 +54,40 @@ const App = () => {
     const visibleCountries = searchItem(countriesData, searchValue);
 
     return (
-        <div className="app-wrapper">
-            <Router>
-                <Header
-                    language={language}
-                    setLanguage={setLanguage}
-                    searchValue={searchValue}
-                    setSearchValue={setSearchValue}
-                />
+        <AuthContext.Provider value={{
+            token, login, logout
+        }}>
+            <div className="app-wrapper">
+                <Router>
+                    <Header
+                        language={language}
+                        setLanguage={setLanguage}
+                        searchValue={searchValue}
+                        setSearchValue={setSearchValue}
+                    />
 
-                <Switch>
-                    <Redirect from="/" exact to="/countries" />
-                    <Route path="/countries">
-                        <CountriesPage
-                            language={language}
-                            countriesData = {visibleCountries}
+                    <Switch>
+                        <Redirect from="/" exact to="/countries" />
+                        <Route path="/countries">
+                            <CountriesPage
+                                language={language}
+                                countriesData = {visibleCountries}
 
-                        />
-                    </Route>
-                    <Route path="/register">
-                        <RegisterForm/>
-                    </Route>
-                    <Route path="/login">
-                        <LoginForm/>
-                    </Route>
-                </Switch>
+                            />
+                        </Route>
+                        <Route path="/register">
+                            <RegisterForm/>
+                        </Route>
+                        <Route path="/login">
+                            <LoginForm/>
+                        </Route>
+                    </Switch>
 
 
-                <Footer/>
-            </Router>
-        </div>
+                    <Footer/>
+                </Router>
+            </div>
+        </AuthContext.Provider>
     );
 };
 
