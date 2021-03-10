@@ -78,7 +78,7 @@ const LoginForm = () => {
                         <div className="form-group">
                             <input 
                                 type="submit" 
-                                className="form-control" 
+                                className="form-control btn-dark" 
                                 id="btn" 
                                 disabled={loading} />
                         </div>
