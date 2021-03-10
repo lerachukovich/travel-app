@@ -2,11 +2,14 @@ import React from 'react';
 import { useHistory } from "react-router-dom";
 import './CountryCard.scss';
 
+
 const CountryCard = ({country, capital, img_source}) => {
+
     const history = useHistory();
     const redirectToCountryPage = () => {
         history.push( `./countries/${country}`);
     };
+
     return (
         <div onClick={()=>redirectToCountryPage()} className="country-card card text-white bg-primary mb-3">
             <img className="card-img" src={img_source} alt={country}/>
