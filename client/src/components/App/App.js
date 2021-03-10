@@ -1,10 +1,11 @@
 import './App.scss';
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import Header from './../Header/Header';
 import Footer from './../Footer/Footer';
 import CountriesPage from './../CountriesPage/CountriesPage';
 import RegisterForm from './../RegisterForm/RegisterForm';
 import LoginForm from './../LoginForm/LoginForm';
+import useHttp from "../../hooks/http.hook";
 
 import {
   BrowserRouter as Router,
@@ -25,15 +26,20 @@ const App = () => {
 
     const [searchValue, setSearchValue] = useState('');
 
-    const getCountriesData = async () => {
-        await fetch('countries.json')
-        .then((response) => {
-            return response.json();
-          })
-          .then((data) => {
-            setCountriesData(data);
-          });
-    };
+    const { loading, request } = useHttp();
+
+    const getCountriesData = useCallback(
+        async () => {
+            try {
+                // eslint-disable-next-line no-shadow
+                const data = await request('/api/countries/countrylist', 'GET', null);
+                setCountriesData(data);
+                // eslint-disable-next-line no-empty
+            } catch (e) {
+            }
+        },
+        [request]
+    )
 
     useEffect(() => {
         getCountriesData();
@@ -72,7 +78,7 @@ const App = () => {
                             <CountriesPage
                                 language={language}
                                 countriesData = {visibleCountries}
-
+                                loading = {loading}
                             />
                         </Route>
                         <Route path="/register">
