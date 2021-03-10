@@ -6,6 +6,7 @@ import CountriesPage from './../CountriesPage/CountriesPage';
 import RegisterForm from './../RegisterForm/RegisterForm';
 import LoginForm from './../LoginForm/LoginForm';
 import useHttp from "../../hooks/http.hook";
+import CountryPage from './../../components/CountryPage/CountryPage';
 
 import {
   BrowserRouter as Router,
@@ -74,12 +75,15 @@ const App = () => {
 
                     <Switch>
                         <Redirect from="/" exact to="/countries" />
-                        <Route path="/countries">
+                        <Route exact path="/countries">
                             <CountriesPage
                                 language={language}
                                 countriesData = {visibleCountries}
                                 loading = {loading}
                             />
+                        </Route>
+                        <Route path="/countries/:id">
+                            <CountryPage/>
                         </Route>
                         <Route path="/register">
                             <RegisterForm/>
