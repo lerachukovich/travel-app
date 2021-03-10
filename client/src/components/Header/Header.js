@@ -8,9 +8,9 @@ import SearchForm from './../SearchForm/SearchForm';
 const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
     return (
         <nav className="app-header navbar navbar-expand-lg navbar-dark bg-primary">
-            <a className="navbar-brand app-logo" href="#">
+            <Link to="/countries" className="navbar-brand app-logo">
                 <img src={logo} alt="logo"/>
-            </a>
+            </Link>
 
             <button className="navbar-toggler collapsed" type="button" data-toggle="collapse"
                     data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
