@@ -25,6 +25,10 @@ const RegisterForm = () => {
         setForm({...form, [e.target.name]: e.target.value})
     }
 
+    const photoHandler = (e) => {
+        console.log(e.target.files[0])
+    }
+
     // const handleSubmit = (e) => {
     //     e.preventDefault();
 
@@ -83,6 +87,16 @@ const RegisterForm = () => {
                                 placeholder="Enter email"
                                 value={form.email}
                                 onChange={changeHandler} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="photo">Avatar img</label>
+                            <input 
+                                type="file" 
+                                // className="form-control" 
+                                name="photo" 
+                                aria-describedby="emailHelp"
+                                accept=".png, .jpg, .jpeg"
+                                onChange={photoHandler} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>

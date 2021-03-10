@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import './LoginForm.scss';
 import {Link} from 'react-router-dom';
 import useHtt from '../../hooks/http.hook';
 import Toast from '../../utils/Toast';
+import {AuthContext} from '../../context/AuthContext';
 
 const LoginForm = () => {
+    const auth = useContext(AuthContext);
     const {loading, request, error, clearError} = useHtt();
     const [showToast, setShowToast] = useState(false);
 
@@ -22,13 +24,14 @@ const LoginForm = () => {
             setShowToast(false);
         }, 2000);
         clearError();
-    }, [error])
+    }, [clearError, error])
 
     const loginHandler = async (e) => {
         e.preventDefault();
         try {
             const data = await request('/api/users/login', 'POST', {...form});
-            console.log(data)
+            console.log(data);
+            auth.login(data.token);
         } catch (e) {      
             setShowToast(true);      
         }
