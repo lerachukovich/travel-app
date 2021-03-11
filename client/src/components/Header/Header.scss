@@ -12,8 +12,23 @@
     .language-switcher {
         margin: 0 0 0 15px;
         cursor: pointer;
-        .form-control {
-            padding: 0.5rem;
+        padding: 5px;
+        width: 15%;
+        @media (max-width: 768px) {
+            margin: 0;
         }
+    }
+    .navbar-collapse {
+        flex-direction: row-reverse;
+    }
+
+    .navbar-nav {
+        align-items: baseline;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    .nav-link {
+        color: white;
     }
 }

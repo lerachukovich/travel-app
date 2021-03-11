@@ -5,6 +5,19 @@
     border-radius: 5%;
     overflow: hidden;
 
+    @media (max-width:950px) {
+        width: 30%;
+        margin: 10px;
+    }
+
+    @media (max-width:640px) {
+        width: 45%;
+    }
+
+    @media (max-width:440px) {
+        width: 100%;
+    }
+
     .country-image {
         width: 100%;
         height: 300px;
