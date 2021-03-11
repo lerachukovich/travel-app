@@ -28,3 +28,9 @@
     box-shadow: 2px 4px 6px gray;
     transform: scale(1.05);
 }
+
+.card-img {
+    max-height: 300px;
+    border-radius: 56% 48% 53% 56% / 70% 50% 58% 41%;
+    padding: 10px;
+}
