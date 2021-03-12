@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './RegisterForm.scss';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import useHttp from '../../hooks/http.hook';
 import Toast from '../../utils/Toast';
+import {AuthContext} from '../../context/AuthContext';
 
 const RegisterForm = () => {
+    const history = useHistory();
+    const auth = useContext(AuthContext);
     const {loading, request, error, clearError} = useHttp();
     const [showToast, setShowToast] = useState(false);
     const [image, setImage] = useState('');
@@ -48,6 +51,9 @@ const RegisterForm = () => {
         try {
             const data = await request('/api/users/register', 'POST', {...form})
             console.log('data', data)
+            const log = await request('/api/users/login', 'POST', {email: form.email, password: form.password});
+            auth.login(log.token, log.userId, log.image, log.name);
+            history.push('/');
         } catch (e) {
             setShowToast(true);
         }

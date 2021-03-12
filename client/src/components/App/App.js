@@ -17,9 +17,11 @@ import {
 
 import { useAuth } from '../../hooks/auth.hook';
 import { AuthContext } from '../../context/AuthContext';
+import Profile from '../Profile/Profile';
 
 const App = () => {
-    const {token, login, logout} = useAuth();
+    const {login, logout, token, userId, name, photo} = useAuth();
+    const isAuthenticated = !!token;
 
     const [countriesData, setCountriesData] = useState([]);
 
@@ -62,7 +64,7 @@ const App = () => {
 
     return (
         <AuthContext.Provider value={{
-            token, login, logout
+            login, logout, token, userId, name, photo, isAuthenticated
         }}>
             <div className="app-wrapper">
                 <Router>
@@ -91,6 +93,11 @@ const App = () => {
                         <Route path="/login">
                             <LoginForm/>
                         </Route>
+                        {isAuthenticated && (
+                            <Route path="/profile">
+                                <Profile />
+                            </Route>
+                        )}
                     </Switch>
 
 

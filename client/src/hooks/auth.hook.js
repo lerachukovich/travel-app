@@ -4,14 +4,24 @@ const storageName = 'userDataTravel';
 
 export const useAuth = () => {
     const [token, setToken] = useState(null);
-    
-    const login = useCallback((jwtToken) => {
+    const [userId, setUserId] = useState(null);
+    const [name, setName] = useState(null);
+    const [photo, setPhoto] = useState(null);
+
+    const login = useCallback((jwtToken, id, picture, nicName) => {
         setToken(jwtToken);
-        localStorage.setItem(storageName, JSON.stringify({token: jwtToken}));
+        setUserId(id);
+        setName(nicName);
+        setPhoto(picture)
+
+        localStorage.setItem(storageName, JSON.stringify({token: jwtToken, userId: id, name: nicName, photo: picture}));
     }, [])
 
     const logout = useCallback(() => {
         setToken(null);
+        setUserId(null);
+        setName(null);
+        setPhoto(null)
         localStorage.removeItem(storageName);
     }, [])
 
@@ -19,9 +29,9 @@ export const useAuth = () => {
         const data = JSON.parse(localStorage.getItem(storageName));
 
         if (data && data.token) {
-            login(data.token);
+            login(data.token, data.userId, data.photo, data.name);
         }
     }, [login])
 
-    return { login, logout, token}
+    return { login, logout, token, userId, name, photo}
 }
