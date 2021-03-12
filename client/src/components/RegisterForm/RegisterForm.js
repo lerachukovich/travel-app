@@ -62,46 +62,46 @@ const RegisterForm = () => {
     return (
         <>
         <div className="register-page-wrapper">
-            <div className="card text-white bg-danger mb-3 register-form">
+            <div className="card text-white bg-primary mb-3 register-form">
                 <div className="card-header">
                     <button type="button" className="btn btn-secondary">Register</button>
                     <Link to="/login">
-                        <button 
-                            type="button" 
+                        <button
+                            type="button"
                             className="btn disabled btn-white"
                             disabled={loading} >
                                 Login</button>
                     </Link>
                 </div>
                 <div className="card-body">
-                    <form 
+                    <form
                         onSubmit={registerHandler}
                         encType='multipart/form-data' >
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                name="name" 
-                                aria-describedby="emailHelp" 
+                            <input
+                                type="text"
+                                className="form-control"
+                                name="name"
+                                aria-describedby="emailHelp"
                                 placeholder="Enter your name"
                                 onChange={changeHandler} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email address</label>
-                            <input 
-                                type="email" 
-                                className="form-control" 
-                                name="email" 
-                                aria-describedby="emailHelp" 
+                            <input
+                                type="email"
+                                className="form-control"
+                                name="email"
+                                aria-describedby="emailHelp"
                                 placeholder="Enter email"
                                 onChange={changeHandler} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="photo">Avatar img</label>
-                            <input 
-                                type="file" 
-                                name="photo" 
+                            <input
+                                type="file"
+                                name="photo"
                                 className="form-control-file"
                                 aria-describedby="emailHelp"
                                 accept=".png, .jpg, .jpeg"
@@ -109,23 +109,23 @@ const RegisterForm = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
-                            <input 
-                                type="password" 
-                                className="form-control" 
-                                name="password" 
+                            <input
+                                type="password"
+                                className="form-control"
+                                name="password"
                                 placeholder="Password"
                                 onChange={changeHandler} />
                         </div>
                         <div className="form-group">
-                            <input 
-                                type="submit" 
-                                className="form-control btn-dark" 
+                            <input
+                                type="submit"
+                                className="form-control btn-dark"
                                 id="btn"
                                 disabled={loading}  />
                         </div>
                     </form>
                 </div>
-                
+
             </div>
 
         </div>
