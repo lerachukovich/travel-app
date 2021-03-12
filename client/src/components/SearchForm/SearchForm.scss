@@ -1,13 +1,16 @@
 .search-form {
   position: relative;
-  width: 100%;
 }
 
 .delete-input {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 37%;
+  right: 39%;
   cursor: pointer;
+}
+
+.search_input {
+  margin-right: 10px;
 }
 

@@ -8,11 +8,7 @@ import {
     NavItem,
     NavLink,
     Input,
-    CardImg,
-    Card,
-    CardHeader,
-    CardText,
-    CardBody
+    CardImg
 } from 'reactstrap';
 import './Header.scss';
 import logo from './../../assets/images/travel.svg';
@@ -30,16 +26,14 @@ const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
                 <NavbarBrand href="/"> <CardImg className='app-logo' src={logo} alt="logo" /></NavbarBrand>
                 <NavbarToggler onClick={toggle}/>
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="me-auto" navbar>                        
+                    <Nav className="me-auto" navbar>
                         {auth.isAuthenticated && auth.photo && (
-                            <Link to="/profile">
-                                <NavItem>
-                                    <NavLink style={{display: 'flex'}}>
-                                        <span>{auth.name}</span>
-                                        <CardImg className='app-logo' src={auth.photo} alt='avatar' />
+                                <NavItem className='user'>
+                                    <NavLink href='/profile'>
+                                        <span>Hello, {auth.name}</span>
                                     </NavLink>
+                                    <CardImg className='avatar_img' src={auth.photo} alt='avatar' />
                                 </NavItem>
-                            </Link>
                         )}
                         <SearchForm
                             searchValue={searchValue}
@@ -48,20 +42,20 @@ const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
                         <Input type="select" name="select" onChange={(e) => setLanguage(e.target.value)}
                                className="form-control language-switcher"
                                id="exampleSelect1" value={language}>
-                            <option value='ru'>RU</option>
                             <option value='en'>EN</option>
+                            <option value='ru'>RU</option>
                             <option value='blr'>BY</option>
                         </Input>
                         {
-                            auth.isAuthenticated ? 
+                            auth.isAuthenticated ?
                             <NavItem>
-                                <NavLink className='nav-link' onClick={auth.logout}>Logout</NavLink>
-                            </NavItem> : 
+                                <NavLink className='nav-link logout_btn' onClick={auth.logout}>Logout</NavLink>
+                            </NavItem> :
                             <NavItem>
-                                <NavLink className='nav-link' href="/login">Login</NavLink>
+                                <NavLink className='nav-link login_btn' href="/login">Login</NavLink>
                             </NavItem>
                         }
-                        
+
                     </Nav>
                 </Collapse>
             </Navbar>

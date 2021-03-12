@@ -6,8 +6,8 @@
         justify-content: space-between !important;
     }
     .footer-links {
-        //width: fit-content !important;
         display: flex;
+        flex-direction: row;
     }
 }
 
