@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import useHttp from "../../hooks/http.hook";
 
-const CountryPage = () => {    
+const CountryPage = () => {
     const { id } = useParams();
 
     const [countryData, setCountryData] = useState({});
@@ -25,13 +25,31 @@ const CountryPage = () => {
         [request]
     );
 
+    const getWeatherData = useCallback(
+        async () => {
+            try {
+                const weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${countryData.country}&APPID=03c58e90c746d993b00ae6c40ccb8326`;
+                fetch(weatherURL)
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data.name)
+                    })
+            } catch (e) {
+            }
+        },
+        [request]
+    )
+
+
+
     useEffect(() => {
         getCountryData();
+        getWeatherData();
     }, []);
 
     return (
         <div>
-            Hello!
+            <h1>hello</h1>
         </div>
     )
 };
