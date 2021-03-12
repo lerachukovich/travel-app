@@ -30,7 +30,8 @@ router.post("/register", (req, res) => {
             const newUser = new User({
                 name: req.body.name,
                 email: req.body.email,
-                password: req.body.password
+                password: req.body.password,
+                photo: req.body.url
             });
 
 // Hash password before saving in database
@@ -89,7 +90,10 @@ router.post("/login", (req, res) => {
                     (err, token) => {
                         res.json({
                             success: true,
-                            token: "Bearer " + token
+                            token: "Bearer " + token,
+                            image: user.photo,
+                            name: user.name,
+                            userId: user.id
                         });
                     }
                 );

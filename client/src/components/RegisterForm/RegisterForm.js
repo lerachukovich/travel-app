@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './RegisterForm.scss';
-import {Link} from 'react-router-dom';
-import useHtt from '../../hooks/http.hook';
+import {Link, useHistory} from 'react-router-dom';
+import useHttp from '../../hooks/http.hook';
 import Toast from '../../utils/Toast';
+import {AuthContext} from '../../context/AuthContext';
 
 const RegisterForm = () => {
-    const {loading, request, error, clearError} = useHtt();
+    const history = useHistory();
+    const auth = useContext(AuthContext);
+    const {loading, request, error, clearError} = useHttp();
     const [showToast, setShowToast] = useState(false);
+    const [image, setImage] = useState('');
 
     const [form, setForm] = useState({
         name: '',
         email: '',
-        password: ''
+        password: '',
+        url: ''
     })
 
     useEffect(() => {
@@ -25,24 +30,30 @@ const RegisterForm = () => {
         setForm({...form, [e.target.name]: e.target.value})
     }
 
-    const photoHandler = (e) => {
-        console.log(e.target.files[0])
+    const getUrl = async (e) => {
+        e.preventDefault();
+        const file = new FormData();
+        file.append('file', image);
+        file.append('upload_preset', 'travel-app');
+        file.append('cloud_name', 'alexus');
+        
+        return await fetch('https://api.cloudinary.com/v1_1/alexus/image/upload', {
+            method: 'post',
+            body: file
+        })
+            .then(res => res.json())
+            .then(file => file.url)
+            .catch(err => console.log(err))
     }
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-
-    //     let formData = new FormData();
-    //     formData.append('name', form.name);
-    //     formData.append('email', form.email);
-    //     formData.append('password', form.password);
-    // }
-
     const registerHandler = async (e) => {
-        e.preventDefault();
+        form.url = await getUrl(e);
         try {
             const data = await request('/api/users/register', 'POST', {...form})
             console.log('data', data)
+            const log = await request('/api/users/login', 'POST', {email: form.email, password: form.password});
+            auth.login(log.token, log.userId, log.image, log.name);
+            history.push('/');
         } catch (e) {
             setShowToast(true);
         }
@@ -74,7 +85,6 @@ const RegisterForm = () => {
                                 name="name"
                                 aria-describedby="emailHelp"
                                 placeholder="Enter your name"
-                                value={form.name}
                                 onChange={changeHandler} />
                         </div>
                         <div className="form-group">
@@ -85,7 +95,6 @@ const RegisterForm = () => {
                                 name="email"
                                 aria-describedby="emailHelp"
                                 placeholder="Enter email"
-                                value={form.email}
                                 onChange={changeHandler} />
                         </div>
                         <div className="form-group">
@@ -96,7 +105,7 @@ const RegisterForm = () => {
                                 className="form-control-file"
                                 aria-describedby="emailHelp"
                                 accept=".png, .jpg, .jpeg"
-                                onChange={photoHandler} />
+                                onChange={(e) => setImage(e.target.files[0])} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
@@ -105,7 +114,6 @@ const RegisterForm = () => {
                                 className="form-control"
                                 name="password"
                                 placeholder="Password"
-                                value={form.password}
                                 onChange={changeHandler} />
                         </div>
                         <div className="form-group">

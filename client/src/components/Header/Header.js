@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {
     Collapse,
     Navbar,
@@ -8,13 +8,20 @@ import {
     NavItem,
     NavLink,
     Input,
-    CardImg
+    CardImg,
+    Card,
+    CardHeader,
+    CardText,
+    CardBody
 } from 'reactstrap';
 import './Header.scss';
 import logo from './../../assets/images/travel.svg';
 import SearchForm from './../SearchForm/SearchForm';
+import { AuthContext } from '../../context/AuthContext';
+import { Link } from 'react-router-dom';
 
 const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
+    const auth = useContext(AuthContext);
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
@@ -23,10 +30,17 @@ const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
                 <NavbarBrand href="/"> <CardImg className='app-logo' src={logo} alt="logo" /></NavbarBrand>
                 <NavbarToggler onClick={toggle}/>
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="me-auto" navbar>
-                        <NavItem>
-                            <NavLink className='nav-link' href="/login/">Login</NavLink>
-                        </NavItem>
+                    <Nav className="me-auto" navbar>                        
+                        {auth.isAuthenticated && auth.photo && (
+                            <Link to="/profile">
+                                <NavItem>
+                                    <NavLink style={{display: 'flex'}}>
+                                        <span>{auth.name}</span>
+                                        <CardImg className='app-logo' src={auth.photo} alt='avatar' />
+                                    </NavLink>
+                                </NavItem>
+                            </Link>
+                        )}
                         <SearchForm
                             searchValue={searchValue}
                             setSearchValue={setSearchValue}
@@ -38,6 +52,16 @@ const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
                             <option value='en'>EN</option>
                             <option value='blr'>BY</option>
                         </Input>
+                        {
+                            auth.isAuthenticated ? 
+                            <NavItem>
+                                <NavLink className='nav-link' onClick={auth.logout}>Logout</NavLink>
+                            </NavItem> : 
+                            <NavItem>
+                                <NavLink className='nav-link' href="/login">Login</NavLink>
+                            </NavItem>
+                        }
+                        
                     </Nav>
                 </Collapse>
             </Navbar>

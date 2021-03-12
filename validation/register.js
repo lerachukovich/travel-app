@@ -9,7 +9,7 @@ module.exports = function validateRegisterInput(data) {
     data.name = !isEmpty(data.name) ? data.name : "";
     data.email = !isEmpty(data.email) ? data.email : "";
     data.password = !isEmpty(data.password) ? data.password : "";
-    // data.password2 = !isEmpty(data.password2) ? data.password2 : "";
+    data.url = !isEmpty(data.url) ? data.url : "";
 
 // Name checks
     if (Validator.isEmpty(data.name)) {
@@ -36,6 +36,12 @@ module.exports = function validateRegisterInput(data) {
     // if (!Validator.equals(data.password, data.password2)) {
     //     errors.password2 = "Passwords must match";
     // }
+
+    // Photo checks
+
+    if (!Validator.isURL(data.url)) {
+        errors.url = "Image didn't choosen"
+    }
 
     return {
         errors,
