@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import useHttp from "../../hooks/http.hook";
+import './CountryPage.scss'
 
 const CountryPage = () => {
     const { id } = useParams();
@@ -48,8 +49,9 @@ const CountryPage = () => {
     }, []);
 
     return (
-        <div>
-            <h1>hello</h1>
+        <div className='country-page_wrapper'>
+            <h1 className='country-page_title'>Hello, you are in {countryData.country}, {countryData.capital}</h1>
+            <p className='country-page_description'>{countryData.description}</p>
         </div>
     )
 };
