@@ -9,7 +9,7 @@ const schema = new Schema({
     img_source: {type:String},
     video_source: {type: String},
     description: {type: String},
-    sigths: {type: Array}
+    sights: {type: Array}
 });
 
 module.exports = model('Country', schema);

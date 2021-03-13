@@ -1,5 +1,6 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import MapComponent from "../Map/Map.component";
 import useHttp from "../../hooks/http.hook";
 
 const CountryPage = () => {
@@ -17,7 +18,7 @@ const CountryPage = () => {
                 console.log(data);
                 const countryInfo = data.filter(countries => countries.country === id)[0];
                 setCountryData(countryInfo);
-                console.log(countryInfo);
+                console.log("Привет",countryInfo);
                 // eslint-disable-next-line no-empty
             } catch (e) {
             }
@@ -49,7 +50,8 @@ const CountryPage = () => {
 
     return (
         <div>
-            <h1>hello</h1>
+            <h1>{countryData.country}</h1>
+            <MapComponent value={countryData} />
         </div>
     )
 };
