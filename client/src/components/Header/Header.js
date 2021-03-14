@@ -42,9 +42,9 @@ const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
                         <Input type="select" name="select" onChange={(e) => setLanguage(e.target.value)}
                                className="form-control language-switcher"
                                id="exampleSelect1" value={language}>
-                            <option value='en'>EN</option>
-                            <option value='ru'>RU</option>
-                            <option value='blr'>BY</option>
+                            <option value='en'>EN 🇬🇧</option>
+                            <option value='ru'>RU 🇷🇺</option>
+                            <option value='blr'>BY 🇧🇾</option>
                         </Input>
                         {
                             auth.isAuthenticated ?
