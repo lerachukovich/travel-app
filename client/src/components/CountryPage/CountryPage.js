@@ -36,6 +36,7 @@ const CountryPage = () => {
             <p className='country-page_description'>{countryData.description}</p>
             <MapComponent value={countryData} />
             <WeatherWidget />
+        </div>
     )
 };
 
