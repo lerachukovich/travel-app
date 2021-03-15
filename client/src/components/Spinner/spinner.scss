@@ -1,0 +1,15 @@
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.map-wrapper .spinner-wrapper {
+  height: 100%;
+}
+
+.spinner{
+  width: 120px;
+  height: auto;
+}

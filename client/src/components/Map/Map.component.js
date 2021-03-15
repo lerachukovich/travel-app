@@ -7,6 +7,7 @@ import Fullscreen from "./Fullscreen";
 import Pin from "./Icon";
 
 import './map.scss';
+import Spinner from "../Spinner/Spinner";
 
 
 const MapComponent = (props) => {
@@ -40,8 +41,9 @@ const MapComponent = (props) => {
 
     if (mapLoad) {
         return (
-            // TODO insert preloader here
-            <div>Loading...</div>
+            <div className='map-wrapper'>
+            <Spinner />
+            </div>
         )
     } else {
         return (
