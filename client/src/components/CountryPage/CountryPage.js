@@ -3,7 +3,9 @@ import { useParams } from "react-router-dom";
 import MapComponent from "../Map/Map.component";
 import useHttp from "../../hooks/http.hook";
 import WeatherWidget from "../WetherWidget/WeatherWidget";
-import './CountryPage.scss'
+import './CountryPage.scss';
+import './../ImagesGallery/ImagesGallery';
+import ImagesGallery from './../ImagesGallery/ImagesGallery';
 
 
 const CountryPage = () => {
@@ -36,6 +38,7 @@ const CountryPage = () => {
             <p className='country-page_description'>{countryData.description}</p>
             <MapComponent value={countryData} />
             <WeatherWidget />
+            <ImagesGallery countryData={countryData}/>
         </div>
     )
 };
