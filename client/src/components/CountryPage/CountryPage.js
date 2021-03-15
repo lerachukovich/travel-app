@@ -20,8 +20,8 @@ const CountryPage = () => {
             try {
                 const data = await request('/api/countries/countrylist', 'GET', null);
                 const countryInfo = data.filter(countries => countries.country_en === id)[0];
-                console.log(id);
                 setCountryData(countryInfo);
+                console.log(id);
                 console.log('olala', countryInfo);
             } catch (e) {
             }
@@ -37,7 +37,7 @@ const CountryPage = () => {
     return (
         <div className='country-page_wrapper'>
             <h1 className='country-page_title'>Hello, you are in {countryData.country_en}, {countryData.capital_en}</h1>
-            <p className='country-page_description'>{countryData.description}</p>
+            <p className='country-page_description'>{countryData.description_en}</p>
             <MapComponent value={countryData} />
             <WeatherWidget />
             <ImagesGallery countryData={countryData}/>
