@@ -39,9 +39,9 @@ export const settings = {
 };
 
 const ImagesGallery = ({countryData}) => {
-    console.log(countryData)
+    // console.log(countryData)
     const {sights} = countryData;
-    console.log(sights);
+    // console.log(sights);
 
     if(sights) {
         return (
