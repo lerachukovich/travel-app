@@ -1,6 +1,7 @@
 import React from 'react';
 import './CountriesPage.scss';
 import CountryCard from './../CountryCard/CountryCard';
+import Spinner from '../Spinner/Spinner'
 
 const CountriesPage = ({countriesData, loading}) => {
 
@@ -13,7 +14,7 @@ const CountriesPage = ({countriesData, loading}) => {
     if (loading) {
         return (
             // TODO insert preloader
-            <h1>Loading</h1>
+            <Spinner/>
         )
     } else {
         return (
