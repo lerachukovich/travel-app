@@ -3,11 +3,15 @@ import { useHistory } from "react-router-dom";
 import './CountryCard.scss';
 
 
-const CountryCard = ({country, capital, img_source}) => {
+const CountryCard = (props) => {
+    const {img_source, country_en} = props;
+
+    const country = props[`country_${props.language}`];
+    const capital = props[`capital_${props.language}`];
 
     const history = useHistory();
     const redirectToCountryPage = () => {
-        history.push( `./countries/${country}`);
+        history.push( `./countries/${country_en}`);
     };
 
     return (

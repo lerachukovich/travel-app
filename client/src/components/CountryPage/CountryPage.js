@@ -6,6 +6,7 @@ import WeatherWidget from "../WetherWidget/WeatherWidget";
 import './CountryPage.scss';
 import './../ImagesGallery/ImagesGallery';
 import ImagesGallery from './../ImagesGallery/ImagesGallery';
+import CurrencyWidget from './../CurrencyWidget/CurrencyWidget';
 
 
 const CountryPage = () => {
@@ -19,7 +20,7 @@ const CountryPage = () => {
         async () => {
             try {
                 const data = await request('/api/countries/countrylist', 'GET', null);
-                const countryInfo = data.filter(countries => countries.country === id)[0];
+                const countryInfo = data.filter(countries => countries.country_en === id)[0];
                 setCountryData(countryInfo);
             } catch (e) {
             }
@@ -38,6 +39,7 @@ const CountryPage = () => {
             <p className='country-page_description'>{countryData.description}</p>
             <MapComponent value={countryData} />
             <WeatherWidget />
+            <CurrencyWidget countryData={countryData}/>
             <ImagesGallery countryData={countryData}/>
         </div>
     )
