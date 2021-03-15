@@ -6,6 +6,7 @@ import WeatherWidget from "../WetherWidget/WeatherWidget";
 import './CountryPage.scss';
 import './../ImagesGallery/ImagesGallery';
 import ImagesGallery from './../ImagesGallery/ImagesGallery';
+import Spinner from "../Spinner/Spinner";
 
 
 const CountryPage = () => {
@@ -36,6 +37,7 @@ const CountryPage = () => {
 
     return (
         <div className='country-page_wrapper'>
+            {loading && <Spinner />}
             <h1 className='country-page_title'>Hello, you are in {countryData.country_en}, {countryData.capital_en}</h1>
             <p className='country-page_description'>{countryData.description}</p>
             <MapComponent value={countryData} />

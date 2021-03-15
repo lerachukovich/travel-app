@@ -2,6 +2,7 @@ import React, {useCallback, useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import useHttp from "../../hooks/http.hook";
 import './WeatherWidget.scss';
+import Spinner from "../Spinner/Spinner";
 
 const WeatherWidget = () => {
     const {id} = useParams();
