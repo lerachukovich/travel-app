@@ -3,19 +3,19 @@ import { useHistory } from "react-router-dom";
 import './CountryCard.scss';
 
 
-const CountryCard = ({country, capital, img_source}) => {
+const CountryCard = ({country_en, capital_en, img_source}) => {
 
     const history = useHistory();
     const redirectToCountryPage = () => {
-        history.push( `./countries/${country}`);
+        history.push( `./countries/${country_en}`);
     };
 
     return (
         <div onClick={()=>redirectToCountryPage()} className="country-card card text-white bg-primary mb-3">
-            <img className="card-img" src={img_source} alt={country}/>
-            <h3 className="card-header">{country}</h3>
+            <img className="card-img" src={img_source} alt={country_en}/>
+            <h3 className="card-header">{country_en}</h3>
             <div className="card-body">
-                <h6 className="card-subtitle text-muted">{capital}</h6>
+                <h6 className="card-subtitle text-muted">{capital_en}</h6>
             </div>
         </div>
     )
