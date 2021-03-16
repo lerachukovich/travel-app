@@ -40,8 +40,8 @@ export const settings = {
 
 const ImagesGallery = ({countryData}) => {
     // console.log(countryData)
-    const {sights} = countryData;
-    // console.log(sights);
+    const {sights, country_en} = countryData;
+    // console.log(country_en);
 
     if(sights) {
         return (
@@ -51,7 +51,7 @@ const ImagesGallery = ({countryData}) => {
                     
                 {sights.map((sight) => {
                     return (
-                    <GalleryItem key={sight.sight_name} {...sight} />
+                    <GalleryItem key={sight.sight_name} {...sight} countryName={country_en} />
                     ) 
                 })}
 
