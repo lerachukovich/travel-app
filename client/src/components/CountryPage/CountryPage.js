@@ -10,6 +10,8 @@ import CurrencyWidget from './../CurrencyWidget/CurrencyWidget';
 import Spinner from "../Spinner/Spinner";
 import Video from "../Video/Video";
 
+import TimeDate from "../TimeDateWidget/TimeDateWidget";
+
 
 
 const CountryPage = () => {
@@ -45,6 +47,7 @@ const CountryPage = () => {
             <p className='country-page_description'>{countryData.description_en}</p>
             <MapComponent value={countryData} />
             <WeatherWidget />
+            <TimeDate value={countryData} />
             <CurrencyWidget countryData={countryData}/>
             <Video value={countryData}/>
             <ImagesGallery countryData={countryData}/>
