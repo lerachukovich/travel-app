@@ -11,13 +11,13 @@ const WeatherWidget = () => {
 
     const getWeatherData = useCallback(
         async () => {
-            console.log(`Country weather${JSON.stringify(countryWeather)}`)
+            // console.log(`Country weather${JSON.stringify(countryWeather)}`)
             try {
                 const weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${id}&APPID=03c58e90c746d993b00ae6c40ccb8326`;
                 fetch(weatherURL)
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
+                        // console.log(data);
                         let weather = {};
                         weather.temperature = `${(data.main.temp - 273.15).toFixed(0)} °C`;
                         weather.feels = `${(data.main.feels_like - 273.15).toFixed(0)} °C`

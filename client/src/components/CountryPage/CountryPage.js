@@ -27,8 +27,6 @@ const CountryPage = () => {
                 const data = await request('/api/countries/countrylist', 'GET', null);
                 const countryInfo = data.filter(countries => countries.country_en === id)[0];
                 setCountryData(countryInfo);
-                console.log(id);
-                console.log('olala', countryInfo);
             } catch (e) {
             }
         },

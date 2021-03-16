@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
-const countries = require("./routes/api/countries")
+const countries = require("./routes/api/countries");
+const votes = require("./routes/api/votes");
 const config = require("./config/keys");
 
 const app = express();
@@ -44,6 +45,7 @@ app.use("/api/users", users);
 
 app.use('/api/countries', countries);
 
+app.use('/api/votes', votes);
 
 const PORT = config.port || 5000;
 app.listen(PORT, () => console.log(`Server up and running on port ${PORT} !`));
