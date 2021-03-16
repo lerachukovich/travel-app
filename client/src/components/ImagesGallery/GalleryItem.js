@@ -1,47 +1,73 @@
-import React, { useState, useContext, useCallback } from "react";
+import React, { useState, useContext, useEffect, useCallback } from "react";
 import Rating from '@material-ui/lab/Rating';
 import { AuthContext } from "../../context/AuthContext";
 import {useHistory} from 'react-router-dom';
 import useHttp from '../../hooks/http.hook';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 const GalleryItem = ({
   sight_name, 
   sight_description, 
   sight_view, 
-  averageRating, 
-  ratedBy, 
+  votes: votesInput,
   countryName}) => {
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+  
+    const toggle = () => setDropdownOpen(prevState => !prevState);
 
-  const {loading, request, error, clearError} = useHttp();
+  const {request} = useHttp();
   const auth = useContext(AuthContext);
   const history = useHistory();
-  const [rating, setRating] = useState({
+  const [rating, setRating] = useState(0);
+  const [votes, setVotes] = useState(votesInput);
+  const [voteData, setVoteData] = useState({
     userId: auth.userId,
-    votes: null,
+    userName: auth.name,
+    vote: null,
     sight_name,
     country: countryName
   })
+  const [readOnly, setReadOnly] = useState(false);
 
-  // const [rating, setRating] = useState(...averageRating || 2);
+  useEffect(() => {
+    setRating(averageRating);
+    if (votes.some(vote => vote.userId === auth.userId)) {
+      setReadOnly(true)
+    }
+  }, [votes])
 
-  const postRating = async () => {
+  const averageRating = () => {
+    return votes.reduce((acc, vote) => acc + vote.vote, 0) / votes.length;
+  }
+
+  const postVote = async () => {
     try {
-      const data = await request('/api/votes/rating', 'POST', {...rating});
-      console.log(data);
+      const data = await request('/api/votes/rating', 'POST', {...voteData});
+      setVotes(data.votes);
+      console.log(data.votes);
     } catch (e) {
       console.log(e);
     }
   }
 
-  const voteHandler = (votes) => {
+  const voteHandler = (vote) => {
     if (!auth.isAuthenticated) {
       history.push('/login')
     }
-    rating.votes = votes;
-    setRating(rating);
-    
-    postRating();
+    voteData.vote = vote;
+    setVoteData(voteData);
+    postVote();
   }
+
+  const ratingList = (
+    votes.map((vote, idx) => {
+      return (
+      <DropdownItem text key={idx}>
+        <Rating value={vote.vote} size='small' readOnly/>
+        <span>{vote.userName}</span>
+      </DropdownItem>)
+    })
+  )
 
   return (
     <div className="carousel-item-wrapper">
@@ -55,8 +81,15 @@ const GalleryItem = ({
           <div className="carousel-item-data">{sight_description}</div>          
         </div>
       </div>
-      <span className="carousel-item-title">{sight_name}</span>
-      <Rating name={sight_name} value={rating} onChange={(e, votes) => voteHandler(votes)} />
+      <span className="carousel-item-title">{sight_name}</span>      
+      <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+        <DropdownToggle caret>
+          <Rating name={sight_name} value={rating} onChange={(e, vote) => voteHandler(vote)} size='large' readOnly={readOnly} />
+        </DropdownToggle>
+        <DropdownMenu>
+          {ratingList}
+        </DropdownMenu>
+      </Dropdown>
     </div>
   );
 };
