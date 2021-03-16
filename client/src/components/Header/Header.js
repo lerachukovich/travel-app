@@ -44,7 +44,7 @@ const Header = ({language, setLanguage, searchValue, setSearchValue}) => {
                                id="exampleSelect1" value={language}>
                             <option value='en'>EN 🇬🇧</option>
                             <option value='ru'>RU 🇷🇺</option>
-                            <option value='blr'>BY 🇧🇾</option>
+                            <option value='by'>BY 🇧🇾</option>
                         </Input>
                         {
                             auth.isAuthenticated ?

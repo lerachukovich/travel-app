@@ -1,6 +1,9 @@
+$mobile-widths: "max-width: 767px";
+$tablet-widths: "max-width: 1279px";
+
 .map-wrapper {
-  width: 40%;
-  height: 300px;
+  width: 60%;
+  height: 450px;
   margin: 0 auto;
 }
 
@@ -55,3 +58,15 @@
   z-index: 1000;
 }
 
+@media ($tablet-widths) {
+  .map-wrapper {
+    width: 70%;
+    height: 350px;
+  }
+}
+
+@media ($mobile-widths) {
+  .map-wrapper {
+    width: 100%;
+  }
+}
