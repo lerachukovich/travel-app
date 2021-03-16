@@ -8,6 +8,7 @@ import './../ImagesGallery/ImagesGallery';
 import ImagesGallery from './../ImagesGallery/ImagesGallery';
 import CurrencyWidget from './../CurrencyWidget/CurrencyWidget';
 import Spinner from "../Spinner/Spinner";
+import Video from "../Video/Video";
 
 
 
@@ -45,6 +46,7 @@ const CountryPage = () => {
             <MapComponent value={countryData} />
             <WeatherWidget />
             <CurrencyWidget countryData={countryData}/>
+            <Video value={countryData}/>
             <ImagesGallery countryData={countryData}/>
         </div>
     )
