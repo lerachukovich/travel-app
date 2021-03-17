@@ -22,8 +22,8 @@ const WeatherWidget = ({language, countryData}) => {
                         weather.temperature = `${(data.main.temp - 273.15).toFixed(0)} °C`;
                         weather.feels = `${(data.main.feels_like - 273.15).toFixed(0)} °C`
                         weather.humidity = `${data.main.humidity} %`;
-                        weather.visibility = `${data.visibility} meters`;
-                        weather.wind = `speed ${data.wind.speed} km/h`;
+                        weather.visibility = `${data.visibility} m`;
+                        weather.wind = `${data.wind.speed} km/h`;
                         weather.today = data.weather[0].description;
                         weather[`owf owf-${data.weather[0].id} owf-5x`] = '';
                         setCountryWeather(weather);
@@ -40,17 +40,17 @@ const WeatherWidget = ({language, countryData}) => {
     }, []);
 
     return (
-        <div className='card text-white bg-info mb-3 weather-widget'>
-            <div className="card-header">{dictionary[language]['weather']}</div>
+        <div className='card text-white bg-primary mb-5 weather-widget'>
+            {/*<div className="card-header">{dictionary[language]['weather']}</div>*/}
             <div className='card-body'>
-                <h4 className='card-title'>{dictionary[language]['weather-in']} {countryData[`country_${language}`]} {dictionary[language]['today']}</h4>
+                <h4 className='card-title'>{dictionary[language]['weather-in']}</h4>
                 <i id='weather-icon'
                    className={Object.keys(countryWeather)[Object.keys(countryWeather).length - 1]}></i>
                     {
                         Object.keys(countryWeather).map(itemKey => {
                             return (
                                 <div key={itemKey} id={itemKey} className='weather-parameter'>
-                                    <span>{dictionary[language][itemKey]}: </span>
+                                    <span>{dictionary[language][itemKey]} </span>
                                     <span>{countryWeather[itemKey]}</span>
                                 </div>
                             )
