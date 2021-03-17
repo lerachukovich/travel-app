@@ -3,7 +3,6 @@ import Rating from '@material-ui/lab/Rating';
 import { AuthContext } from "../../context/AuthContext";
 import {useHistory} from 'react-router-dom';
 import useHttp from '../../hooks/http.hook';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import {Accordion, AccordionSummary, AccordionDetails} from '@material-ui/core';
 
 const GalleryItem = ({
@@ -12,9 +11,6 @@ const GalleryItem = ({
   sight_view, 
   votes: votesInput,
   countryName}) => {
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-  
-    const toggle = () => setDropdownOpen(prevState => !prevState);
 
   const {request} = useHttp();
   const auth = useContext(AuthContext);
@@ -63,14 +59,10 @@ const GalleryItem = ({
   const ratingList = (
     votes.map((vote, idx) => {
       return (
-      // <DropdownItem text key={idx}>
-      //   <Rating value={vote.vote} size='small' readOnly/>
-      //   <span>{vote.userName}</span>
-      // </DropdownItem>
-      <AccordionDetails>        
-        <Rating value={vote.vote} size='small' readOnly/>
-        <span>{vote.userName}</span>
-      </AccordionDetails>
+        <AccordionDetails>        
+          <Rating value={vote.vote} size='small' readOnly/>
+          <span>{vote.userName}</span>
+        </AccordionDetails>
     )})
   )
 
@@ -93,15 +85,6 @@ const GalleryItem = ({
         </AccordionSummary>
         {ratingList}
       </Accordion>    
-
-      {/* <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle caret>
-          <Rating name={sight_name} value={rating} onChange={(e, vote) => voteHandler(vote)} size='large' readOnly={readOnly} />
-        </DropdownToggle>
-        <DropdownMenu>
-          {ratingList}
-        </DropdownMenu>
-      </Dropdown> */}
     </div>
   );
 };
