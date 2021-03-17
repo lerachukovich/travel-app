@@ -35,7 +35,7 @@ const App = () => {
     const [searchVisibility, setSearchVisibility] = useState(true);
 
     const [isScroll, setIsScroll] = useState(true);
-    
+
     const getCountriesData = useCallback(
         async () => {
             try {
@@ -110,9 +110,9 @@ const App = () => {
                         )}
                     </Switch>
 
-                    <Footer/>
                 </Router>
             </div>
+            <Footer/>
         </AuthContext.Provider>
     );
 };

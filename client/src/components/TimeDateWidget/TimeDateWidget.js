@@ -25,7 +25,7 @@ const TimeDate = (props) => {
     const currentWeekDay = weekdays[date.getDay()];
 
     return (
-        <div className='card text-white bg-primary mb-5 time-widget'>
+        <div className='card text-white bg-primary mb-3 time-widget'>
             <div className='card-body'>
                 <h4 className='card-title'> {dictionary[language]['time-in']} {props.value[`capital_${language}`]}</h4>
                 <h1 className='card-header country-time'>

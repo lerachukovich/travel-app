@@ -65,7 +65,7 @@ const ImagesGallery = ({countryData, language, setIsScroll}) => {
                   })}
 
                 </Slider>
-                <button className="full-screen-btn" onClick={()=>changeGallerySize()}><i class={`fas ${isGalleryOpened ? 'fa-compress-arrows-alt' :'fa-expand-arrows-alt'}`}></i></button>
+                <button className="full-screen-btn" onClick={()=>changeGallerySize()}><i className={`fas ${isGalleryOpened ? 'fa-compress-arrows-alt' :'fa-expand-arrows-alt'}`}></i></button>
             </div>
           </div>
         )

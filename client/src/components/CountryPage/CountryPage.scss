@@ -5,16 +5,17 @@ $tablet-widths: "max-width: 1279px";
   position: relative;
   margin: 0 auto;
   padding: 0 2rem;
+  z-index: 0;
 
   .country-page_title {
-    font-family: 'Hachi Maru Pop', cursive;
+    font-family: 'Nunito', sans-serif;
     text-align: center;
     padding: 15px 0;
   }
 
   .country-page__go-back {
     position: fixed;
-    top: 14%;
+    top: 11%;
     left: 3%;
     display: block;
     width: 50px;
@@ -35,22 +36,39 @@ $tablet-widths: "max-width: 1279px";
   .top {
     display: flex;
     justify-content: space-between;
-    //align-items: center;
+    align-items: center;
     margin-bottom: 100px;
+    @media (max-width: 840px) {
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
     .description {
-      width: 60%;
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 840px) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
       .description-country {
         font-size: 1.5rem;
         font-family: 'Quicksand', sans-serif;
+        margin-bottom: 30px;
       }
       .description-img {
-        max-width: 100%;
+        max-width: 80%;
         margin: 0 auto;
         border-radius: 20px;
+        @media (max-width: 840px) {
+          max-width: 100%;
+        }
       }
     }
     .country-info {
       width: 30%;
+      @media (max-width: 840px) {
+        width: 100%;
+      }
     }
   }
 
@@ -62,11 +80,6 @@ $tablet-widths: "max-width: 1279px";
 
 }
 
-@media ($mobile-widths) {
-  .country-page_wrapper .country-page__go-back {
-    top: 7%;
-  }
-}
 
 
 
