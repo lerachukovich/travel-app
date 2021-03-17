@@ -43,12 +43,18 @@ const CountryPage = ({language, setSearchVisibility, setIsScroll}) => {
     return (
         <div className='country-page_wrapper'>
             {loading && <Spinner />}
+
             <h1 className='country-page_title'>{dictionary[language]['hello-message']} {countryData[`country_${language}`]}, {countryData[`capital_${language}`]}</h1>
             <p className='country-page_description'>{countryData[`description_${language}`]}</p>
+<img className='country-img' src={countryData.img_source} alt="country image"/>
             <MapComponent value={countryData} />
+
+                <div className='country-info'>
             <WeatherWidget language={language} countryData={countryData} />
             <TimeDate value={countryData} language={language} />
             <CurrencyWidget countryData={countryData} language={language}/>
+                </div>
+
             <Video value={countryData}/>
             <ImagesGallery countryData={countryData} language={language} setIsScroll={setIsScroll}/>
         </div>

@@ -20,6 +20,7 @@ import { AuthContext } from '../../context/AuthContext';
 import Profile from '../Profile/Profile';
 
 const App = () => {
+
     const {login, logout, token, userId, name, photo} = useAuth();
     const isAuthenticated = !!token;
 
@@ -38,11 +39,8 @@ const App = () => {
     const getCountriesData = useCallback(
         async () => {
             try {
-                // eslint-disable-next-line no-shadow
                 const data = await request('/api/countries/countrylist', 'GET', null);
-                console.log('countries', data);
                 setCountriesData(data);
-                // eslint-disable-next-line no-empty
             } catch (e) {
             }
         },

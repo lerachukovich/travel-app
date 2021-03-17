@@ -24,7 +24,7 @@ const TimeDate = (props) => {
     const currentWeekDay = weekdays[date.getDay()];
 
     return (
-        <div>
+        <div className='time-widget'>
             <p> {dictionary[language]['time-in']} {props.value[`capital_${language}`]}</p>
             <p>
                 {date.toLocaleTimeString(props.value.locale, {timeZone: props.value.timezone})}

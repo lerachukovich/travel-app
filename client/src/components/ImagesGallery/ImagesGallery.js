@@ -39,6 +39,7 @@ export const settings = {
     ]
 };
 
+
 const ImagesGallery = ({countryData, language, setIsScroll}) => {
   const [isGalleryOpened, setIsGalleryOpened] = useState(false);
 
@@ -48,6 +49,7 @@ const ImagesGallery = ({countryData, language, setIsScroll}) => {
       setIsScroll();
       setIsGalleryOpened(!isGalleryOpened);
     };
+
 
     if(sights) {
         return (
@@ -67,6 +69,7 @@ const ImagesGallery = ({countryData, language, setIsScroll}) => {
             </div>            
           </div>
         )        
+
     } else return null;
 
 }
