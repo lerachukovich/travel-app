@@ -39,25 +39,23 @@ export const settings = {
 };
 
 const ImagesGallery = ({countryData}) => {
-    console.log(countryData)
     const {sights} = countryData;
-    console.log(sights);
 
     if(sights) {
         return (
             <div className="carousel-slider-wrapper">
                 <h2 className="carousel-slider-title">Country Sights</h2>
                 <Slider {...settings}>
-                    
+
                 {sights.map((sight) => {
                     return (
                     <GalleryItem key={sight.sight_name} {...sight} />
-                    ) 
+                    )
                 })}
 
-                </Slider>              
+                </Slider>
             </div>
-        )        
+        )
     } else return null;
 
 }

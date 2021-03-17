@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 
 const TimeDate = (props) => {
 
@@ -18,7 +18,7 @@ const TimeDate = (props) => {
     })
 
     return (
-        <div>
+        <div className='time-widget'>
             <p> Time in {props.value.capital_en}</p>
             <p>
                 {date.toLocaleTimeString(props.value.locale, {timeZone: props.value.timezone})}
