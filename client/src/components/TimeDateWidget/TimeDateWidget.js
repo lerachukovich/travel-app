@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
+import { dictionary } from '../../data/dictionary';
+import './TimeDateWidget.scss'
+
 
 const TimeDate = (props) => {
+    const {language} = props;
 
     const [date, setDate] = React.useState(new Date());
     const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -17,13 +21,18 @@ const TimeDate = (props) => {
         };
     })
 
+    const currentMonth = month[date.getMonth()];
+    const currentWeekDay = weekdays[date.getDay()];
+
     return (
-        <div>
-            <p> Time in {props.value.capital_en}</p>
-            <p>
-                {date.toLocaleTimeString(props.value.locale, {timeZone: props.value.timezone})}
-            </p>
-            <p> {weekdays[date.getDay()]}, {date.getDate()} {month[date.getMonth()]}</p>
+        <div className='card text-white bg-primary mb-5 time-widget'>
+            <div className='card-body'>
+                <h4 className='card-title'> {dictionary[language]['time-in']} {props.value[`capital_${language}`]}</h4>
+                <h1 className='card-header country-time'>
+                    {date.toLocaleTimeString(props.value.locale, {timeZone: props.value.timezone})}
+                </h1>
+                <p className='country-date'> {dictionary[language][currentWeekDay]}, {date.getDate()} {dictionary[language][currentMonth]}</p>
+            </div>
         </div>
     )
 }

@@ -1,9 +1,9 @@
-import React, { useState, useContext, useEffect, useCallback } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Rating from '@material-ui/lab/Rating';
 import { AuthContext } from "../../context/AuthContext";
 import {useHistory} from 'react-router-dom';
 import useHttp from '../../hooks/http.hook';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import {Accordion, AccordionSummary, AccordionDetails} from '@material-ui/core';
 
 const GalleryItem = ({
   sight_name, 
@@ -11,15 +11,12 @@ const GalleryItem = ({
   sight_view, 
   votes: votesInput,
   countryName}) => {
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-  
-    const toggle = () => setDropdownOpen(prevState => !prevState);
 
   const {request} = useHttp();
   const auth = useContext(AuthContext);
   const history = useHistory();
   const [rating, setRating] = useState(0);
-  const [votes, setVotes] = useState(votesInput);
+  const [votes, setVotes] = useState(votesInput || []);
   const [voteData, setVoteData] = useState({
     userId: auth.userId,
     userName: auth.name,
@@ -52,7 +49,7 @@ const GalleryItem = ({
 
   const voteHandler = (vote) => {
     if (!auth.isAuthenticated) {
-      history.push('/login')
+      return history.push('/login')
     }
     voteData.vote = vote;
     setVoteData(voteData);
@@ -62,11 +59,11 @@ const GalleryItem = ({
   const ratingList = (
     votes.map((vote, idx) => {
       return (
-      <DropdownItem text key={idx}>
-        <Rating value={vote.vote} size='small' readOnly/>
-        <span>{vote.userName}</span>
-      </DropdownItem>)
-    })
+        <AccordionDetails>        
+          <Rating value={vote.vote} size='small' readOnly/>
+          <span>{vote.userName}</span>
+        </AccordionDetails>
+    )})
   )
 
   return (
@@ -81,15 +78,13 @@ const GalleryItem = ({
           <div className="carousel-item-data">{sight_description}</div>          
         </div>
       </div>
-      <span className="carousel-item-title">{sight_name}</span>      
-      <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle caret>
+      <span className="carousel-item-title">{sight_name}</span> 
+      <Accordion>
+        <AccordionSummary>
           <Rating name={sight_name} value={rating} onChange={(e, vote) => voteHandler(vote)} size='large' readOnly={readOnly} />
-        </DropdownToggle>
-        <DropdownMenu>
-          {ratingList}
-        </DropdownMenu>
-      </Dropdown>
+        </AccordionSummary>
+        {ratingList}
+      </Accordion>    
     </div>
   );
 };

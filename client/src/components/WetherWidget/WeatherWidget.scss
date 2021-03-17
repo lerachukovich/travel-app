@@ -1,18 +1,13 @@
 @import "css/owfont-regular";
 
 .weather-widget {
-  width: 30%;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 20px;
 }
 
 .weather-parameter {
-  color: #1f9bcf;
-}
-
-#temperature,
-#feels,
-#humidity,
-#visibility,
-#wind,
-#today {
-  color: #ffffff;
+  span:last-child {
+    font-weight: 900;
+    font-size: 1rem;
+  }
 }

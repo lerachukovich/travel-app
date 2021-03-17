@@ -1,12 +1,17 @@
 .table_wrapper {
     width: 30%;
+    font-family: 'Quicksand', sans-serif;
     & table {
         text-align: center;
         box-shadow: 0px 0px 5px black;
         border-radius: 5px;
-        .currencies th {        
+        .currencies th {
             font-weight: 900;
             font-size: 16px;
         }
     }
+}
+
+.currency-widget {
+    border-radius: 20px;
 }

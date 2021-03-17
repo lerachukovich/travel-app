@@ -1,5 +1,5 @@
-import React, { useCallback, useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import React, {useCallback, useState, useEffect} from 'react';
+import {useParams} from "react-router-dom";
 import MapComponent from "../Map/Map.component";
 import useHttp from "../../hooks/http.hook";
 import WeatherWidget from "../WetherWidget/WeatherWidget";
@@ -11,15 +11,18 @@ import Spinner from "../Spinner/Spinner";
 import Video from "../Video/Video";
 
 import TimeDate from "../TimeDateWidget/TimeDateWidget";
+import {dictionary} from './../../data/dictionary';
 
 
 
-const CountryPage = () => {
+
+const CountryPage = ({language, setSearchVisibility, setIsScroll}) => {
     const { id } = useParams();
+
 
     const [countryData, setCountryData] = useState({});
 
-    const { loading, request } = useHttp();
+    const {loading, request} = useHttp();
 
     const getCountryData = useCallback(
         async () => {
@@ -33,6 +36,7 @@ const CountryPage = () => {
         [request]
     );
 
+    useEffect(() => setSearchVisibility(), [setSearchVisibility]);
 
     useEffect(() => {
         getCountryData();
@@ -40,15 +44,31 @@ const CountryPage = () => {
 
     return (
         <div className='country-page_wrapper'>
-            {loading && <Spinner />}
-            <h1 className='country-page_title'>Hello, you are in {countryData.country_en}, {countryData.capital_en}</h1>
-            <p className='country-page_description'>{countryData.description_en}</p>
-            <MapComponent value={countryData} />
-            <WeatherWidget />
-            <TimeDate value={countryData} />
-            <CurrencyWidget countryData={countryData}/>
-            <Video value={countryData}/>
-            <ImagesGallery countryData={countryData}/>
+            {loading && <Spinner/>}
+            <h1 className='country-page_title'> {countryData[`country_${language}`]}, {countryData[`capital_${language}`]}</h1>
+            <div className="top">
+                <div className="description">
+                    <p className='description-country'>{countryData[`description_${language}`]}</p>
+                    <img className='description-img' src={countryData.img_source} alt="country image"/>
+                </div>
+
+                <div className='country-info'>
+                    <WeatherWidget language={language} countryData={countryData}/>
+                    <TimeDate value={countryData} language={language}/>
+                    <CurrencyWidget countryData={countryData} language={language}/>
+                </div>
+            </div>
+
+
+            <div className="media">
+                <Video value={countryData}/>
+            </div>
+
+            <MapComponent value={countryData}/>
+
+
+            <ImagesGallery countryData={countryData} language={language} setIsScroll={setIsScroll}/>
+
         </div>
     )
 };

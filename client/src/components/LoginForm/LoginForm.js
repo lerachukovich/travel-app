@@ -5,7 +5,7 @@ import useHtt from '../../hooks/http.hook';
 import Toast from '../../utils/Toast';
 import {AuthContext} from '../../context/AuthContext';
 
-const LoginForm = () => {
+const LoginForm = ({setSearchVisibility}) => {
     const history = useHistory();
     const auth = useContext(AuthContext);
     const {loading, request, error, clearError} = useHtt();
@@ -18,7 +18,9 @@ const LoginForm = () => {
 
     const changeHandler = (e) => {
         setForm({...form, [e.target.name]: e.target.value})
-    }
+    };
+    
+    useEffect(()=> setSearchVisibility(), [setSearchVisibility]);
 
     useEffect(() => {
         setTimeout(() => {
