@@ -1,15 +1,43 @@
 .country-page_wrapper {
   margin: 0 auto;
   padding: 0 2rem;
+
+  .country-page_title {
+    font-family: 'Hachi Maru Pop', cursive;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    //align-items: center;
+    margin-bottom: 100px;
+    .description {
+      width: 60%;
+      .description-country {
+        font-size: 1.5rem;
+        font-family: 'Quicksand', sans-serif;
+      }
+      .description-img {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 20px;
+      }
+    }
+    .country-info {
+      width: 30%;
+    }
+  }
+
+  .media {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
 }
 
-.country-page_title {
-  font-family: 'Hachi Maru Pop', cursive;
-  text-align: center;
-  padding: 15px 0;
-}
 
-.country-page_description {
-  font-size: 1.5rem;
-  font-family: 'Quicksand', sans-serif;
-}
+
+
