@@ -11,7 +11,7 @@ const Profile = ({language, setSearchVisibility}) => {
     useEffect(()=> setSearchVisibility(), [setSearchVisibility]);
 
     return (
-        <div>            
+        <div className='profile-page'>
             <Card className="country-card" >
                 <CardHeader>{dictionary[language]['profile-message']}!</CardHeader>
                 <CardImg src={auth.photo} alt='avatar' />

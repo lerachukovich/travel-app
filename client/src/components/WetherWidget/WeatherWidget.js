@@ -2,7 +2,6 @@ import React, {useCallback, useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import useHttp from "../../hooks/http.hook";
 import './WeatherWidget.scss';
-import Spinner from "../Spinner/Spinner";
 import { dictionary } from '../../data/dictionary';
 
 const WeatherWidget = ({language, countryData}) => {
@@ -12,7 +11,6 @@ const WeatherWidget = ({language, countryData}) => {
 
     const getWeatherData = useCallback(
         async () => {
-            // console.log(`Country weather${JSON.stringify(countryWeather)}`)
             try {
                 const weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${id}&APPID=03c58e90c746d993b00ae6c40ccb8326`;
                 fetch(weatherURL)
@@ -40,8 +38,7 @@ const WeatherWidget = ({language, countryData}) => {
     }, []);
 
     return (
-        <div className='card text-white bg-primary mb-5 weather-widget'>
-            {/*<div className="card-header">{dictionary[language]['weather']}</div>*/}
+        <div className='card text-white bg-primary mb-3 weather-widget'>
             <div className='card-body'>
                 <h4 className='card-title'>{dictionary[language]['weather-in']}</h4>
                 <i id='weather-icon'
