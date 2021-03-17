@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, useCallback } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Rating from '@material-ui/lab/Rating';
 import { AuthContext } from "../../context/AuthContext";
 import {useHistory} from 'react-router-dom';
@@ -19,7 +19,7 @@ const GalleryItem = ({
   const auth = useContext(AuthContext);
   const history = useHistory();
   const [rating, setRating] = useState(0);
-  const [votes, setVotes] = useState(votesInput);
+  const [votes, setVotes] = useState(votesInput || []);
   const [voteData, setVoteData] = useState({
     userId: auth.userId,
     userName: auth.name,
@@ -52,7 +52,7 @@ const GalleryItem = ({
 
   const voteHandler = (vote) => {
     if (!auth.isAuthenticated) {
-      history.push('/login')
+      return history.push('/login')
     }
     voteData.vote = vote;
     setVoteData(voteData);
