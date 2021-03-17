@@ -4,6 +4,7 @@ import { AuthContext } from "../../context/AuthContext";
 import {useHistory} from 'react-router-dom';
 import useHttp from '../../hooks/http.hook';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import {Accordion, AccordionSummary, AccordionDetails} from '@material-ui/core';
 
 const GalleryItem = ({
   sight_name, 
@@ -62,11 +63,15 @@ const GalleryItem = ({
   const ratingList = (
     votes.map((vote, idx) => {
       return (
-      <DropdownItem text key={idx}>
+      // <DropdownItem text key={idx}>
+      //   <Rating value={vote.vote} size='small' readOnly/>
+      //   <span>{vote.userName}</span>
+      // </DropdownItem>
+      <AccordionDetails>        
         <Rating value={vote.vote} size='small' readOnly/>
         <span>{vote.userName}</span>
-      </DropdownItem>)
-    })
+      </AccordionDetails>
+    )})
   )
 
   return (
@@ -81,15 +86,22 @@ const GalleryItem = ({
           <div className="carousel-item-data">{sight_description}</div>          
         </div>
       </div>
-      <span className="carousel-item-title">{sight_name}</span>      
-      <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+      <span className="carousel-item-title">{sight_name}</span> 
+      <Accordion>
+        <AccordionSummary>
+          <Rating name={sight_name} value={rating} onChange={(e, vote) => voteHandler(vote)} size='large' readOnly={readOnly} />
+        </AccordionSummary>
+        {ratingList}
+      </Accordion>    
+
+      {/* <Dropdown isOpen={dropdownOpen} toggle={toggle}>
         <DropdownToggle caret>
           <Rating name={sight_name} value={rating} onChange={(e, vote) => voteHandler(vote)} size='large' readOnly={readOnly} />
         </DropdownToggle>
         <DropdownMenu>
           {ratingList}
         </DropdownMenu>
-      </Dropdown>
+      </Dropdown> */}
     </div>
   );
 };
