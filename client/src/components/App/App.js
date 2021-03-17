@@ -26,13 +26,14 @@ const App = () => {
 
     const [countriesData, setCountriesData] = useState([]);
 
-    const [language, setLanguage] = useState('ru');
+    const [language, setLanguage] = useState(JSON.parse(localStorage.getItem('current-lang')) || 'ru');
 
     const [searchValue, setSearchValue] = useState('');
 
     const { loading, request } = useHttp();
 
-
+    const [searchVisibility, setSearchVisibility] = useState(true);
+    
     const getCountriesData = useCallback(
         async () => {
             try {
@@ -53,8 +54,8 @@ const App = () => {
             return items;
         }
         const foundCountries = items.filter(item => {
-            const foundCountries = item.country.toLowerCase().indexOf(value.toLowerCase()) > -1;
-            const foundCapitals = item.capital.toLowerCase().indexOf(value.toLowerCase()) > -1;
+            const foundCountries = item[`country_${language}`].toLowerCase().indexOf(value.toLowerCase()) > -1;
+            const foundCapitals = item[`capital_${language}`].toLowerCase().indexOf(value.toLowerCase()) > -1;
             return foundCountries || foundCapitals;
         });
         return foundCountries;
@@ -73,6 +74,7 @@ const App = () => {
                         setLanguage={setLanguage}
                         searchValue={searchValue}
                         setSearchValue={setSearchValue}
+                        searchVisibility={searchVisibility}
                     />
 
                     <Switch>
@@ -82,24 +84,28 @@ const App = () => {
                                 language={language}
                                 countriesData = {visibleCountries}
                                 loading = {loading}
+                                setSearchVisibility={()=> setSearchVisibility(true)}
                             />
                         </Route>
                         <Route path="/countries/:id">
-                            <CountryPage/>
+                            <CountryPage
+                                language={language}
+                                setSearchVisibility={()=> setSearchVisibility(false)}
+                            />
                         </Route>
                         <Route path="/register">
-                            <RegisterForm/>
+                            <RegisterForm setSearchVisibility={()=> setSearchVisibility(false)}/>
                         </Route>
                         <Route path="/login">
-                            <LoginForm/>
+                            <LoginForm setSearchVisibility={()=> setSearchVisibility(false)}/>
                         </Route>
                         {isAuthenticated && (
                             <Route path="/profile">
-                                <Profile />
+                                <Profile language={language}
+                                setSearchVisibility={()=> setSearchVisibility(false)} />
                             </Route>
                         )}
                     </Switch>
-
 
                     <Footer/>
                 </Router>

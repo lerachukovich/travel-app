@@ -2,15 +2,17 @@ import React, {useCallback, useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import useHttp from "../../hooks/http.hook";
 import './WeatherWidget.scss';
+import Spinner from "../Spinner/Spinner";
+import { dictionary } from '../../data/dictionary';
 
-const WeatherWidget = () => {
+const WeatherWidget = ({language, countryData}) => {
     const {id} = useParams();
     const [countryWeather, setCountryWeather] = useState({});
     const {loading, request} = useHttp();
 
     const getWeatherData = useCallback(
         async () => {
-            console.log(`Country weather${JSON.stringify(countryWeather)}`)
+            // console.log(`Country weather${JSON.stringify(countryWeather)}`)
             try {
                 const weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${id}&APPID=03c58e90c746d993b00ae6c40ccb8326`;
                 fetch(weatherURL)
@@ -31,31 +33,29 @@ const WeatherWidget = () => {
             }
         },
         [request]
-    )
+    );
 
     useEffect(() => {
         getWeatherData();
     }, []);
 
-
     return (
         <div className='card text-white bg-info mb-3 weather-widget'>
-            <div className="card-header">Weather</div>
+            <div className="card-header">{dictionary[language]['weather']}</div>
             <div className='card-body'>
-                <h4 className='card-title'>Weather in the capital</h4>
+                <h4 className='card-title'>{dictionary[language]['weather-in']} {countryData[`country_${language}`]} {dictionary[language]['today']}</h4>
                 <i id='weather-icon'
                    className={Object.keys(countryWeather)[Object.keys(countryWeather).length - 1]}></i>
                     {
                         Object.keys(countryWeather).map(itemKey => {
                             return (
                                 <div key={itemKey} id={itemKey} className='weather-parameter'>
-                                    <span>{itemKey}: </span>
+                                    <span>{dictionary[language][itemKey]}: </span>
                                     <span>{countryWeather[itemKey]}</span>
                                 </div>
                             )
                         })
                     }
-
             </div>
         </div>
     )

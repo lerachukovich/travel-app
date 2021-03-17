@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/lerachukovich/travel-app#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "bootswatch": "^4.6.0",
@@ -27,6 +29,7 @@
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "leaflet": "^1.7.1",
+    "material-components-web": "^10.0.0",
     "mongoose": "^5.11.15",
     "node-sass": "^5.0.0",
     "passport": "^0.4.1",

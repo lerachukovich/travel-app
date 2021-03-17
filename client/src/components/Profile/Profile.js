@@ -1,18 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Card, CardBody, CardHeader, CardImg } from 'reactstrap';
 import { AuthContext } from '../../context/AuthContext';
+import {dictionary} from './../../data/dictionary';
 
 import './Profile.scss';
 
-const Profile = () => {
+const Profile = ({language, setSearchVisibility}) => {
     const auth = useContext(AuthContext);
+
+    useEffect(()=> setSearchVisibility(), [setSearchVisibility]);
 
     return (
         <div>            
             <Card className="country-card" >
-                <CardHeader>Hello from Profile Page</CardHeader>
+                <CardHeader>{dictionary[language]['profile-message']}!</CardHeader>
                 <CardImg src={auth.photo} alt='avatar' />
-                <CardBody>I'm {auth.name}</CardBody>
+                <CardBody>{dictionary[language]['me']} {auth.name}</CardBody>
             </Card>
         </div>
     )
