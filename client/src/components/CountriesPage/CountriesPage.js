@@ -14,7 +14,6 @@ const CountriesPage = ({countriesData, loading, language, setSearchVisibility}) 
 
     if (loading) {
         return (
-            // TODO insert preloader
             <Spinner/>
         )
     } else {
