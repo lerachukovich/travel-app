@@ -11,10 +11,11 @@ import Spinner from "../Spinner/Spinner";
 import Video from "../Video/Video";
 
 import TimeDate from "../TimeDateWidget/TimeDateWidget";
+import {dictionary} from './../../data/dictionary';
 
 
 
-const CountryPage = () => {
+const CountryPage = ({language, setSearchVisibility}) => {
     const { id } = useParams();
 
     const [countryData, setCountryData] = useState({});
@@ -33,6 +34,7 @@ const CountryPage = () => {
         [request]
     );
 
+    useEffect(()=> setSearchVisibility(), [setSearchVisibility]);
 
     useEffect(() => {
         getCountryData();
@@ -41,14 +43,14 @@ const CountryPage = () => {
     return (
         <div className='country-page_wrapper'>
             {loading && <Spinner />}
-            <h1 className='country-page_title'>Hello, you are in {countryData.country_en}, {countryData.capital_en}</h1>
-            <p className='country-page_description'>{countryData.description_en}</p>
+            <h1 className='country-page_title'>{dictionary[language]['hello-message']} {countryData[`country_${language}`]}, {countryData[`capital_${language}`]}</h1>
+            <p className='country-page_description'>{countryData[`description_${language}`]}</p>
             <MapComponent value={countryData} />
-            <WeatherWidget />
-            <TimeDate value={countryData} />
-            <CurrencyWidget countryData={countryData}/>
+            <WeatherWidget language={language} countryData={countryData} />
+            <TimeDate value={countryData} language={language} />
+            <CurrencyWidget countryData={countryData} language={language}/>
             <Video value={countryData}/>
-            <ImagesGallery countryData={countryData}/>
+            <ImagesGallery countryData={countryData} language={language}/>
         </div>
     )
 };

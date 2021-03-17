@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect }from 'react';
 import './CountriesPage.scss';
 import CountryCard from './../CountryCard/CountryCard';
-import Spinner from '../Spinner/Spinner'
+import Spinner from '../Spinner/Spinner';
 
-const CountriesPage = ({countriesData, loading, language}) => {
+const CountriesPage = ({countriesData, loading, language, setSearchVisibility}) => {
+    useEffect(()=> setSearchVisibility(), [setSearchVisibility]);
 
     const countriesList = (
         countriesData.map(item => {

@@ -2,6 +2,7 @@ import React from 'react';
 import './ImagesGallery.sass';
 import Slider from "react-slick";
 import GalleryItem from './GalleryItem';
+import { dictionary } from '../../data/dictionary';
 
 export const settings = {
   dots: false,
@@ -38,7 +39,7 @@ export const settings = {
     ]
 };
 
-const ImagesGallery = ({countryData}) => {
+const ImagesGallery = ({countryData, language}) => {
     // console.log(countryData)
     const {sights, country_en} = countryData;
     // console.log(country_en);
@@ -46,7 +47,7 @@ const ImagesGallery = ({countryData}) => {
     if(sights) {
         return (
             <div className="carousel-slider-wrapper">
-                <h2 className="carousel-slider-title">Country Sights</h2>
+                <h2 className="carousel-slider-title">{dictionary[language]['country-sights']}</h2>
                 <Slider {...settings}>
                     
                 {sights.map((sight) => {

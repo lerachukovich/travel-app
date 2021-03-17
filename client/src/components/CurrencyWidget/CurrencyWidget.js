@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './CurrencyWidget.scss';
+import { dictionary } from '../../data/dictionary';
 
 const currencyCodes = {
     'Spain': 'EUR',
@@ -12,7 +13,7 @@ const currencyCodes = {
     'Poland': 'PLN'
 };
 
-const CurrencyWidget = ({countryData}) => {
+const CurrencyWidget = ({countryData, language}) => {
     const countryCurrency = currencyCodes[countryData.country_en];
     console.log(countryCurrency);
     
@@ -36,10 +37,10 @@ const CurrencyWidget = ({countryData}) => {
             <table class="table table-hover">
             <thead>
                 <tr class="table-primary">
-                    <th scope="col" colSpan="3">Currency Widget</th>
+                    <th scope="col" colSpan="3">{dictionary[language]['currency-info']}</th>
                 </tr>
                 <tr class="table-active">
-                    <th scope="col" colSpan="3">Local currency: {countryCurrency}</th>
+                    <th scope="col" colSpan="3">{dictionary[language]['local-currency']}: {countryCurrency}</th>
                 </tr>
             </thead>
             <tbody>
