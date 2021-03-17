@@ -18,7 +18,6 @@ const WeatherWidget = ({language, countryData}) => {
                 fetch(weatherURL)
                     .then(res => res.json())
                     .then(data => {
-                        // console.log(data);
                         let weather = {};
                         weather.temperature = `${(data.main.temp - 273.15).toFixed(0)} °C`;
                         weather.feels = `${(data.main.feels_like - 273.15).toFixed(0)} °C`

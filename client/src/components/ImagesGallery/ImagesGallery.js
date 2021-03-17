@@ -39,26 +39,25 @@ export const settings = {
     ]
 };
 
+
 const ImagesGallery = ({countryData, language}) => {
-    // console.log(countryData)
     const {sights, country_en} = countryData;
-    // console.log(country_en);
 
     if(sights) {
         return (
             <div className="carousel-slider-wrapper">
                 <h2 className="carousel-slider-title">{dictionary[language]['country-sights']}</h2>
                 <Slider {...settings}>
-                    
+
                 {sights.map((sight) => {
                     return (
                     <GalleryItem key={sight.sight_name} {...sight} countryName={country_en} />
                     ) 
                 })}
 
-                </Slider>              
+                </Slider>
             </div>
-        )        
+        )
     } else return null;
 
 }
