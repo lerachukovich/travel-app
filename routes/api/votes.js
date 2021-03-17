@@ -12,6 +12,7 @@ router.post("/rating", async (req, res) => {
         const sight = await Country.findOne({country_en: country}).then(data => data.sights);
         sight.map(item => {
             if (item.sight_name === sight_name) {
+                console.log('OK');
                 // Check if user done vote
                 if (item.votes.some(vote => vote.userId === userId)) return item;
 
