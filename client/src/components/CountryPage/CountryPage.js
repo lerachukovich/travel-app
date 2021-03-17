@@ -1,5 +1,5 @@
 import React, {useCallback, useState, useEffect} from 'react';
-import {useParams} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
 import MapComponent from "../Map/Map.component";
 import useHttp from "../../hooks/http.hook";
 import WeatherWidget from "../WetherWidget/WeatherWidget";
@@ -45,6 +45,7 @@ const CountryPage = ({language, setSearchVisibility, setIsScroll}) => {
     return (
         <div className='country-page_wrapper'>
             {loading && <Spinner/>}
+            <Link className="country-page__go-back" to={'/'} title="Go back">Go</Link>
             <h1 className='country-page_title'> {countryData[`country_${language}`]}, {countryData[`capital_${language}`]}</h1>
             <div className="top">
                 <div className="description">
