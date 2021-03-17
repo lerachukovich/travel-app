@@ -14,8 +14,11 @@ import TimeDate from "../TimeDateWidget/TimeDateWidget";
 import {dictionary} from './../../data/dictionary';
 
 
-const CountryPage = ({language, setSearchVisibility}) => {
-    const {id} = useParams();
+
+
+const CountryPage = ({language, setSearchVisibility, setIsScroll}) => {
+    const { id } = useParams();
+
 
     const [countryData, setCountryData] = useState({});
 
@@ -56,14 +59,16 @@ const CountryPage = ({language, setSearchVisibility}) => {
                 </div>
             </div>
 
-            <ImagesGallery countryData={countryData} language={language}/>
-
 
             <div className="media">
                 <Video value={countryData}/>
             </div>
 
             <MapComponent value={countryData}/>
+
+
+            <ImagesGallery countryData={countryData} language={language} setIsScroll={setIsScroll}/>
+
         </div>
     )
 };

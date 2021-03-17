@@ -5,3 +5,8 @@
 .btn {
     padding: .65rem 1.5rem;
 }
+
+.app-wrapper.app-content-hidden {
+    height: 100vh;
+    overflow: hidden;
+}
