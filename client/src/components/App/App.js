@@ -32,6 +32,8 @@ const App = () => {
     const { loading, request } = useHttp();
 
     const [searchVisibility, setSearchVisibility] = useState(true);
+
+    const [isScroll, setIsScroll] = useState(true);
     
     const getCountriesData = useCallback(
         async () => {
@@ -69,7 +71,7 @@ const App = () => {
         <AuthContext.Provider value={{
             login, logout, token, userId, name, photo, isAuthenticated
         }}>
-            <div className="app-wrapper">
+            <div className={`app-wrapper ${isScroll ? '' : 'app-content-hidden'}`}>
                 <Router>
                     <Header
                         language={language}
@@ -93,6 +95,7 @@ const App = () => {
                             <CountryPage
                                 language={language}
                                 setSearchVisibility={()=> setSearchVisibility(false)}
+                                setIsScroll={()=> setIsScroll(!isScroll)}
                             />
                         </Route>
                         <Route path="/register">

@@ -3,6 +3,7 @@
 
 .carousel-slider-wrapper
     padding: 10px 0px
+    position: relative
 
 .carousel-slider-title
     font-family: 'Hachi Maru Pop', cursive
@@ -102,3 +103,27 @@
     font-weight: 300
     margin: 0px 2px
     color: grey
+
+.carousel-slider-layout.layout-show
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(209, 209, 209, 0.95)
+    z-index: 1200
+    padding-top: 100px
+
+.full-screen-btn
+    position: absolute
+    top: 25px
+    right: 0
+    border: none
+    box-shadow: 0px 0px 5px black
+    border-radius: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 30px
+    height: 30px
+    cursor: pointer

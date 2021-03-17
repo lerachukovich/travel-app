@@ -15,7 +15,7 @@ import {dictionary} from './../../data/dictionary';
 
 
 
-const CountryPage = ({language, setSearchVisibility}) => {
+const CountryPage = ({language, setSearchVisibility, setIsScroll}) => {
     const { id } = useParams();
 
     const [countryData, setCountryData] = useState({});
@@ -50,7 +50,7 @@ const CountryPage = ({language, setSearchVisibility}) => {
             <TimeDate value={countryData} language={language} />
             <CurrencyWidget countryData={countryData} language={language}/>
             <Video value={countryData}/>
-            <ImagesGallery countryData={countryData} language={language}/>
+            <ImagesGallery countryData={countryData} language={language} setIsScroll={setIsScroll}/>
         </div>
     )
 };
