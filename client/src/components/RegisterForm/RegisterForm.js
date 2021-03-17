@@ -5,7 +5,7 @@ import useHttp from '../../hooks/http.hook';
 import Toast from '../../utils/Toast';
 import {AuthContext} from '../../context/AuthContext';
 
-const RegisterForm = () => {
+const RegisterForm = ({setSearchVisibility}) => {
     const history = useHistory();
     const auth = useContext(AuthContext);
     const {loading, request, error, clearError} = useHttp();
@@ -17,7 +17,9 @@ const RegisterForm = () => {
         email: '',
         password: '',
         url: ''
-    })
+    });
+
+    useEffect(()=> setSearchVisibility(), [setSearchVisibility]);
 
     useEffect(() => {
         setTimeout(() => {

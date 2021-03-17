@@ -19,7 +19,7 @@ const GalleryItem = ({
   const auth = useContext(AuthContext);
   const history = useHistory();
   const [rating, setRating] = useState(0);
-  const [votes, setVotes] = useState(votesInput);
+  const [votes, setVotes] = useState(votesInput || []);
   const [voteData, setVoteData] = useState({
     userId: auth.userId,
     userName: auth.name,
