@@ -14,13 +14,13 @@ const CountryCard = (props) => {
     };
 
     return (
-        <div onClick={()=>redirectToCountryPage()} className="country-card card text-white bg-primary mb-3">
-            <img className="card-img" src={img_source} alt={country_en}/>
-            <h3 className="card-header">{country}</h3>
-            <div className="card-body">
-                <h6 className="card-subtitle text-muted">{capital}</h6>
+            <div onClick={()=>redirectToCountryPage()} className="country-card card text-white bg-primary mb-3">
+                <img className="card-img" src={img_source} alt={country_en}/>
+                <h3 className="card-header">{country}</h3>
+                <div className="card-body">
+                    <h6 className="card-subtitle text-muted">{capital}</h6>
+                </div>
             </div>
-        </div>
     )
 }
 
