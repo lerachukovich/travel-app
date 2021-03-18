@@ -1,7 +1,15 @@
 $mobile-widths: "max-width: 767px";
 $tablet-widths: "max-width: 1279px";
 
+@mixin container() {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .country-page_wrapper {
+  @include container();
   position: relative;
   margin: 0 auto;
   padding: 0 2rem;
