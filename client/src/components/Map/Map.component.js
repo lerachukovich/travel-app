@@ -8,7 +8,7 @@ import Pin from "./Icon";
 
 import './map.scss';
 
-import Countries from './countries.json';
+// import Countries from './countries.json';
 
 import Spinner from "../Spinner/Spinner";
 
@@ -49,16 +49,16 @@ const MapComponent = (props) => {
         color: '#1a1a1a'
     }
 
-    const getBorder = () => {
-        setBorderLine(Countries.features.filter(it => it.properties.ADMIN === country));
-    }
+    // const getBorder = () => {
+    //     setBorderLine(Countries.features.filter(it => it.properties.ADMIN === country));
+    // }
 
     useEffect(() => {
         getLatLon();
     })
-    useEffect(() => {
-        getBorder()
-    }, [mapLoad])
+    // useEffect(() => {
+    //     getBorder()
+    // }, [mapLoad])
 
     if (mapLoad) {
         return (
@@ -77,7 +77,7 @@ const MapComponent = (props) => {
                     <TileLayer
                         url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=6da2f080-0b88-4c56-be28-3de3b9c9e2b5">
                     </TileLayer>
-                    <GeoJSON style={countryStyle} data={borderLine} />
+                    {/*<GeoJSON style={countryStyle} data={borderLine} />*/}
                     <Marker position={[lat, lon]}
                             icon={Pin}>
                         <Popup>
