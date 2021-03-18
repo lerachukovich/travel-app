@@ -30,17 +30,21 @@ const Header = ({language, setLanguage, searchValue, setSearchValue, searchVisib
 
     return (
             <Navbar className="app-header navbar navbar-expand-lg navbar-dark bg-primary" expand="md">
-                <NavbarBrand href="/"> <CardImg className='app-logo' src={logo} alt="logo" /></NavbarBrand>
+                <Link to='/'>
+                    <NavbarBrand> <CardImg className='app-logo' src={logo} alt="logo" /></NavbarBrand>
+                </Link>
                 <NavbarToggler onClick={toggle}/>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="me-auto" navbar>
                         {auth.isAuthenticated && auth.photo && (
-                                <NavItem className='user'>
-                                    <NavLink href='/profile'>
-                                        <span>{dictionary[language]['hello']}, {auth.name}</span>
-                                    </NavLink>
-                                    <CardImg className='avatar_img' src={auth.photo} alt='avatar' />
-                                </NavItem>
+                                <Link to='/profile' className='nav-link'>
+                                    <NavItem className='user'>
+                                        <NavLink>
+                                            <span>{dictionary[language]['hello']}, {auth.name}</span>
+                                        </NavLink>
+                                        <CardImg className='avatar_img' src={auth.photo} alt='avatar' />
+                                    </NavItem>
+                                </Link>
                         )}
                         {searchVisibility 
                         ? <SearchForm
@@ -63,9 +67,11 @@ const Header = ({language, setLanguage, searchValue, setSearchValue, searchVisib
                             <NavItem>
                                 <NavLink className='nav-link logout_btn' onClick={auth.logout}>{dictionary[language]['logout']}</NavLink>
                             </NavItem> :
-                            <NavItem>
-                                <NavLink className='nav-link login_btn' href="/login">{dictionary[language]['login']}</NavLink>
-                            </NavItem>
+                            <Link to="/login" className='nav-link'>
+                                <NavItem>
+                                    <NavLink className='nav-link login_btn'>{dictionary[language]['login']}</NavLink>
+                                </NavItem>
+                            </Link>
                         }
 
                     </Nav>
