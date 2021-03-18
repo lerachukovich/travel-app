@@ -1,5 +1,13 @@
+@mixin container() {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .countries-page-wrapper {
-    width: 100%;
+    @include container();
+    //width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;

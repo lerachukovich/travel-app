@@ -27,7 +27,7 @@ const MapComponent = (props) => {
             if (props.value.lat && props.value.lon) {
                 setLat(props.value.lat);
                 setLon(props.value.lon);
-                setCapital(props.value.capital);
+                setCapital(props.value.capital_en);
                 setCountry(props.value.country_en);
                 setMapLoad(false);
             } else {
@@ -39,6 +39,8 @@ const MapComponent = (props) => {
 
     const fullScreenHandler = () => {
         setFullScreen(!isFullScreen);
+        document.querySelector('html').classList.toggle('blocked-scroll');
+        document.querySelector('.app-footer').classList.toggle('hide-it');
     }
 
     const countryStyle = {
