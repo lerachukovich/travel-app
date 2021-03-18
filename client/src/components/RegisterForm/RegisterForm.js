@@ -39,7 +39,7 @@ const RegisterForm = ({setSearchVisibility}) => {
         file.append('upload_preset', 'travel-app');
         file.append('cloud_name', 'travelapp2021');
         
-        return await fetch('	https://api.cloudinary.com/v1_1/travelapp2021/image/upload', {
+        return await fetch('https://api.cloudinary.com/v1_1/travelapp2021/image/upload', {
             method: 'post',
             body: file
         })
