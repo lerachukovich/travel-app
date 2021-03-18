@@ -50,7 +50,11 @@ const CountryPage = ({language, setSearchVisibility, setIsScroll}) => {
             <div className="top">
                 <div className="description">
                     <p className='description-country'>{countryData[`description_${language}`]}</p>
-                    <img className='description-img' src={countryData.img_source} alt="country image"/>
+                        <div className="product">
+                            <div className="effect-1"> </div>
+                            <div className="effect-2"> </div>
+                            <div className="content"><img className='description-img' src={countryData.img_source} alt="country image"/></div>
+                        </div>
                 </div>
 
                 <div className='country-info'>
