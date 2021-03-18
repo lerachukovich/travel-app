@@ -64,11 +64,10 @@ const CountryPage = ({language, setSearchVisibility, setIsScroll}) => {
                 </div>
             </div>
 
-            <div className="media">
-                <Video value={countryData}/>
-            </div>
 
-            <ImagesGallery countryData={countryData} language={language} setIsScroll={setIsScroll}/>
+                <Video value={countryData}/>
+                <ImagesGallery countryData={countryData} language={language} setIsScroll={setIsScroll}/>
+
             <MapComponent value={countryData}/>
 
 
