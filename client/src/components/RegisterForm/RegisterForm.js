@@ -37,9 +37,9 @@ const RegisterForm = ({setSearchVisibility}) => {
         const file = new FormData();
         file.append('file', image);
         file.append('upload_preset', 'travel-app');
-        file.append('cloud_name', 'alexus');
+        file.append('cloud_name', 'travelapp2021');
         
-        return await fetch('https://api.cloudinary.com/v1_1/alexus/image/upload', {
+        return await fetch('https://api.cloudinary.com/v1_1/travelapp2021/image/upload', {
             method: 'post',
             body: file
         })
