@@ -55,6 +55,19 @@ $tablet-widths: "max-width: 1279px";
   position: fixed !important;
   width: 100% !important;
   height: 100vh !important;
-  z-index: 1000;
+  z-index: 6000;
+}
+
+.blocked-scroll {
+  overflow: hidden;
+}
+
+.hide-it {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
