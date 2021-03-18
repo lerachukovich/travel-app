@@ -2,11 +2,11 @@ $mobile-widths: "max-width: 767px";
 $tablet-widths: "max-width: 1279px";
 
 .video-wrapper {
-  width: 45%;
+  width: 100%;
   height: 450px;
-  margin: 0 auto;
   justify-content: center;
   background-color: #cccccc;
+  margin-bottom: 40px;
 }
 
 .video-content {
@@ -14,16 +14,10 @@ $tablet-widths: "max-width: 1279px";
   height: 100%;
 }
 
-@media ($tablet-widths) {
-  .video-wrapper {
-    width: 70%;
-  }
-}
 
 @media ($mobile-widths) {
   .video-wrapper {
-    width: 100%;
-    height: 200px;
+    height: 300px;
   }
 }
 
