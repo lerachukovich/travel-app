@@ -4,7 +4,7 @@
   "description": "React Travel Application",
   "main": "server.js",
   "scripts": {
-    "start": "npm run node server.js & (cd client && npm run build && npm run start)",
+    "start": "npm run server.js & (cd client && npm run build && npm run start)",
     "server": "node server.js",
     "client": "npm run build --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
