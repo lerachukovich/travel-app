@@ -20,7 +20,7 @@ const CurrencyWidget = ({countryData, language}) => {
 
     const getCurrencyData = async () => {
         if (countryCurrency) {
-            await fetch(`https://apilayer.net/api/live?access_key=0b90a429006e62812eaf47ae10e065d4&currencies=EUR,USD,RUB&source=${countryCurrency}`)
+            await fetch(`https://apilayer.net/api/live?access_key=b4e5222ff79e3759cea8554a810cb38f&currencies=EUR,USD,RUB&source=${countryCurrency}`)
                 .then(response => response.json())
                 .then(data => setCurrencyData(data.quotes))
                 .catch(error => console.log(error));
