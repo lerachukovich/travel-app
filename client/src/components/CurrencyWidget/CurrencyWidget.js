@@ -20,7 +20,7 @@ const CurrencyWidget = ({countryData, language}) => {
 
     const getCurrencyData = async () => {
         if (countryCurrency) {
-            await fetch(`https://apilayer.net/api/live?access_key=b4e5222ff79e3759cea8554a810cb38f&currencies=EUR,USD,RUB&source=${countryCurrency}`)
+            await fetch(`http://apilayer.net/api/live?access_key=43121c3cd93b00e5266cd30715305307&currencies=USD,RUB,EUR&source=USD&format=1`)
                 .then(response => response.json())
                 .then(data => setCurrencyData(data.quotes))
                 .catch(error => console.log(error));
@@ -35,10 +35,10 @@ const CurrencyWidget = ({countryData, language}) => {
         <div className="card text-white bg-primary mb-3 currency-widget">
             <div className="card-body">
                 <h4 className="card-title">{dictionary[language]['currency-info']}</h4>
-                <p className='card-title local-currency'>{dictionary[language]['local-currency']}: {countryCurrency}</p>
-                <p>EUR: {currencyData[`${countryCurrency}EUR`]}</p>
-                <p>USD: {currencyData[`${countryCurrency}USD`]}</p>
-                <p>RUB: {currencyData[`${countryCurrency}RUB`]}</p>
+                {/*<p className='card-title local-currency'>{dictionary[language]['local-currency']}: USD</p>*/}
+                <p>EUR: {currencyData[`USDEUR`]}</p>
+                <p>USD: {currencyData[`USDUSD`]}</p>
+                <p>RUB: {currencyData[`USDRUB`]}</p>
             </div>
         </div>
     )
