@@ -6,6 +6,7 @@ const users = require("./routes/api/users");
 const countries = require("./routes/api/countries");
 const votes = require("./routes/api/votes");
 const config = require("./config/keys");
+const path = require("path");
 
 const app = express();
 
@@ -47,5 +48,13 @@ app.use('/api/countries', countries);
 
 app.use('/api/votes', votes);
 
-const PORT = config.port || 5000;
+if (process.env.NODE_ENV === 'production') {
+    app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
+}
+
+const PORT = config.port || 5001;
 app.listen(PORT, () => console.log(`Server up and running on port ${PORT} !`));
