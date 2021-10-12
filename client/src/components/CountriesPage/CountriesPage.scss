@@ -1,0 +1,23 @@
+@mixin container() {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.countries-page-wrapper {
+    @include container();
+    //width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    @media (max-width:950px) {
+        justify-content: flex-start;
+    }
+}
+
+.country-img {
+    max-width: 100%;
+    margin: 0 auto;
+}

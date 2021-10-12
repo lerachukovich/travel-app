@@ -1,0 +1,161 @@
+$mobile-widths: "max-width: 767px";
+$tablet-widths: "max-width: 1279px";
+
+@mixin container() {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.country-page_wrapper {
+  @include container();
+  position: relative;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 0;
+
+  .country-page_title {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .country-page__go-back {
+    position: fixed;
+    top: 11%;
+    left: 3%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1a1a1a;
+    background-image: url("../../assets/images/arrow.svg");
+    background-size: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0;
+    z-index: 1000;
+    opacity: 0.7;
+    box-shadow: 0 2px 2px 1px #000000;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+    @media (max-width: 840px) {
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+    .description {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 840px) {
+        width: 100%;
+      }
+      .description-country {
+        font-size: 1.5rem;
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 30px;
+      }
+      .description-img {
+        max-width: 80%;
+        margin: 0 auto;
+        border-radius: 20px;
+        @media (max-width: 840px) {
+          max-width: 90%;
+        }
+      }
+    }
+    .country-info {
+      width: 30%;
+      @media (max-width: 840px) {
+        width: 100%;
+        padding-top: 100px;
+      }
+    }
+  }
+
+}
+
+.product {
+  position: relative;
+}
+
+.product:before {
+  content: "";
+  float: left;
+  padding-top: 50%;
+  @media (max-width:840px) {
+    padding-top: 55%;
+  }
+}
+
+.content {
+  position: absolute;
+  z-index: 20;
+  text-align: center;
+  cursor: pointer;
+}
+
+.product:hover .effect-1,
+.product:hover .effect-2 {
+  display: block;
+}
+
+.effect-1,
+.effect-2 {
+  border-radius: 5%;
+  display: none;
+  mix-blend-mode: multiply;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  width: 80%;
+  z-index: 10;
+  @media (max-width:840px) {
+    width: 87%;
+  }
+}
+
+.effect-1 {
+  animation: rotate 1.8s linear infinite;
+  background: cyan;
+}
+
+.effect-2 {
+  animation: rotate 1.2s linear reverse infinite;
+  background: #e7a9ff;
+}
+
+@keyframes rotate {
+  0% {
+    top: 0;
+    left: 8%;
+  }
+  25% {
+    top: 8%;
+    left: 0%;
+  }
+  50% {
+    top: 16%;
+    left: 8%;
+  }
+  75% {
+    top: 8%;
+    left: 16%;
+  }
+  100% {
+    top: 0;
+    left: 8%;
+  }
+}
+
+
+
+
+

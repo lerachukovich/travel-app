@@ -1,0 +1,13 @@
+@import "css/owfont-regular";
+
+.weather-widget {
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 20px;
+}
+
+.weather-parameter {
+  span:last-child {
+    font-weight: 900;
+    font-size: 1rem;
+  }
+}

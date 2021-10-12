@@ -1,0 +1,33 @@
+@mixin container() {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+$mobile-widths: "max-width: 767px";
+$tablet-widths: "max-width: 1279px";
+
+#root {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.app-wrapper {
+    width: 100%;
+}
+
+.btn {
+    padding: .65rem 1.5rem;
+}
+
+.app-wrapper.app-content-hidden {
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media ($mobile-widths) {
+    #root {
+        height: 100%;
+    }
+}
